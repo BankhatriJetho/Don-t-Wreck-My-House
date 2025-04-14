@@ -3,11 +3,9 @@ package com.dwmyhouse.ui;
 import com.dwmyhouse.domain.GuestService;
 import com.dwmyhouse.domain.HostService;
 import com.dwmyhouse.domain.ReservationService;
-import com.dwmyhouse.models.Reservation;
-import com.sun.security.jgss.GSSUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
-import java.security.PublicKey;
 import java.util.Scanner;
 
 /**
@@ -15,7 +13,7 @@ import java.util.Scanner;
  */
 
 @Controller
-public class Controller {
+public class MainController {
 
     private final GuestService guestService;
     private final HostService hostService;
@@ -23,8 +21,8 @@ public class Controller {
     private final Scanner console = new Scanner(System.in);
 
     @Autowired
-    public Controller(GuestService guestService, HostService hostService,
-                      ReservationService reservationService) {
+    public MainController(GuestService guestService, HostService hostService,
+                          ReservationService reservationService) {
         this.guestService = guestService;
         this.hostService = hostService;
         this.reservationService = reservationService;
