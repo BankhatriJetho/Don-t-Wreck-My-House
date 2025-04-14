@@ -3,9 +3,14 @@ package com.dwmyhouse.ui;
 import com.dwmyhouse.domain.GuestService;
 import com.dwmyhouse.domain.HostService;
 import com.dwmyhouse.domain.ReservationService;
+import com.dwmyhouse.models.Guest;
+import com.dwmyhouse.models.Host;
+import com.dwmyhouse.models.Reservation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import java.time.LocalDate;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -109,7 +114,81 @@ public class MainController {
 
     private void makeReservation() {
         System.out.println("[Make Reservations]");
-        //more logic here for making a reservation
+        System.out.println("Guest Email: ");
+        String guestEmail = console.nextLine().trim();
+
+        Guest guest = guestService.getGuestByEmail(guestEmail);
+
+        if(guest == null) {
+            System.out.println("Guest not found.");
+            return;
+        }
+        System.out.println("Host Email: ");
+        String hostEmail = console.nextLine().trim();
+
+        Host host = hostService.getHostByEmail(hostEmail);
+
+        if(host == null) {
+            System.out.println("Host not found.");
+            return;
+        }
+
+        //checking what dates are already booked so admin doesn't cause overlaps
+        List<Reservation> reservations = reservationService.viewReservationsForHost(host.getId());
+
+        System.out.println("\n" + host.getLastName() + ": " + host.getCity() + ", " + host.getState());
+        System.out.println("=".repeat(40));
+
+        for (Reservation r : reservations) {
+            if (r.getStartDate().isAfter(LocalDate.now())) {
+                Guest resGuest = guestService.getGuestById(r.getGuestId());
+                String guestName = (resGuest != null)
+                        ? resGuest.getLastName() + ", " + resGuest.getFirstName()
+                        : "Unknown Guest";
+                String guestEmailDisplay = (resGuest != null) ? resGuest.getEmail() : "???";
+
+                System.out.printf("ID: %d, %s - %s, Guest: %s, Email: %s%n",
+                        r.getId(),
+                        r.getStartDate(),
+                        r.getEndDate(),
+                        guestName,
+                        guestEmail);
+            }
+        }
+
+        try {
+            System.out.println("Start (yyyy-MM-dd): ");
+            LocalDate start = LocalDate.parse(console.nextLine().trim());
+
+            System.out.println("End (yyyy-MM-dd): ");
+            LocalDate end = LocalDate.parse(console.nextLine().trim());
+
+            Reservation newRes = new Reservation(0, start, end, guest.getGuestId(),null);
+            boolean success = reservationService.makeReservation(newRes, host);
+
+            if(success) {
+                System.out.println("\nSummary");
+                System.out.println("==========");
+                System.out.printf("Start: %s%n", newRes.getStartDate());
+                System.out.printf("End: %s%n", newRes.getEndDate());
+                System.out.printf("Total: $%s%n", newRes.getTotal());
+
+                System.out.println("Is this okay? [y/n]: ");
+                String confirm = console.nextLine().trim();
+                if(confirm.equalsIgnoreCase("y")) {
+                    System.out.println("\nSuccess");
+                    System.out.println("==========");
+                    System.out.println("Reservation created.");
+                } else {
+                    System.out.println("Reservation cancelled.");
+                }
+            } else {
+                System.out.println("Invalid reservation. Possible overlap or bad dates.");
+            }
+        } catch (Exception e) {
+            System.out.println("Invalid date format.");
+        }
+
     }
 
     private void editReservation(){
