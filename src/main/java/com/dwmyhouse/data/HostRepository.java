@@ -74,7 +74,7 @@ public class HostRepository {
         host.setState(tokens[6]);
         host.setPostalCode(tokens[7]);
         host.setStandardRate(new BigDecimal(tokens[8]));
-        host.setWeekendRate(new BigDecimal(tokens[9]));
+        host.setWeekendsRate(new BigDecimal(tokens[9]));
         return host;
     }
 }

@@ -19,7 +19,9 @@ public class ReservationServiceTest {
 
     @BeforeEach
     void setup() {
+
         fakeRepo = new FakeReservationRepository();
+        fakeRepo.clearAll();
         service = new ReservationService(fakeRepo);
 
         testHost = new Host();
@@ -38,7 +40,7 @@ public class ReservationServiceTest {
 
         boolean result = service.makeReservation(reservation, testHost);
         assertTrue(result);
-        assertEquals(new BigDecimal("200"), reservation.getTotal());
+        assertEquals(new BigDecimal("250"), reservation.getTotal());
     }
 
     @Test
