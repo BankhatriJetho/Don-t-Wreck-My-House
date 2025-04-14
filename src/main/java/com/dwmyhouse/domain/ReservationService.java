@@ -29,7 +29,7 @@ public class ReservationService {
      * @param hostId the host's ID
      * @return List of reservations
      */
-    public List<Reservation> viewReservationForHost(String hostId) {
+    public List<Reservation> viewReservationsForHost(String hostId) {
         return repository.findByHost(hostId);
     }
 

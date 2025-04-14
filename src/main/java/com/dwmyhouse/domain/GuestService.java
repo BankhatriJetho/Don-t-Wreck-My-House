@@ -30,6 +30,15 @@ public class GuestService {
     }
 
     /**
+     * Finds guest by id
+     * @param id the guest's id
+     * @return Guest or null if not found
+     */
+    public Guest getGuestById(String id) {
+        return repository.findById(id);
+    }
+
+    /**
      * Returns all guests
      * @return List of guests
      */

@@ -73,7 +73,38 @@ public class MainController {
 
     private void viewReservations() {
         System.out.println("[View Reservations]");
-        //add more logic
+        System.out.println("Host Email: ");
+        String email = console.nextLine().trim();
+
+        var host = hostService.getHostByEmail(email);
+        if(host == null) {
+            System.out.println("Host not found.");
+            return;
+        }
+
+        var reservations = reservationService.viewReservationsForHost(host.getId());
+        if(reservations.isEmpty()) {
+            System.out.println("No reservations found for this host.");
+            return;
+        }
+
+        System.out.println("\n" + host.getLastName() + ": " + host.getCity() + ", " + host.getState());
+        System.out.println("=".repeat(40));
+
+        for(var r : reservations) {
+            var guest = guestService.getGuestById(r.getGuestId());
+            String guestName = (guest != null) ? guest.getLastName() + ", " + guest.getFirstName() : "Unknown Guest";
+
+            String guestEmail = (guest != null) ? guest.getEmail() : "???";
+
+            System.out.printf("ID: %d, %s - %s, Guest: %s, Email: %s%n",
+                    r.getId(),
+                    r.getStartDate(),
+                    r.getEndDate(),
+                    guestName,
+                    guestEmail
+            );
+        }
     }
 
     private void makeReservation() {

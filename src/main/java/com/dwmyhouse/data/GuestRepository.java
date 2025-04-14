@@ -61,6 +61,18 @@ public class GuestRepository {
                 .orElse(null);
     }
 
+    /**
+     * Finds guest by their ID
+     * @param id the guest's id
+     * @return guest or null if not found
+     */
+    public Guest findById(String id) {
+        return findAll().stream()
+                .filter(g -> g.getGuestId().equals(id))
+                .findFirst()
+                .orElse(null);
+    }
+
     private Guest deserialize(String line) {
         String[] tokens = line.split(",", -1);
         if(tokens.length != 6)
