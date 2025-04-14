@@ -46,7 +46,7 @@ public class ReservationRepository {
                     isFirst = false;
                     continue;
                 }
-                Reservation r = deserialize(line);
+                Reservation r = deserialize(line, hostId);
                 if (r != null) {
                     result.add(r);
                 }
@@ -107,7 +107,7 @@ public class ReservationRepository {
      * @param line CSV line
      * @return a Reservation or null if line is invalid
      */
-    private Reservation deserialize(String line) {
+    private Reservation deserialize(String line, String hostId) {
         String[] tokens = line.split(",", -1);
         if (tokens.length != 5) return null;
 
@@ -117,6 +117,7 @@ public class ReservationRepository {
         r.setEndDate(LocalDate.parse(tokens[2]));
         r.setGuestId(tokens[3]);
         r.setTotal(new BigDecimal(tokens[4]));
+        r.setHostId(hostId);
         return r;
     }
 

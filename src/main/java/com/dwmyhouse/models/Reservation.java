@@ -34,6 +34,8 @@ public class Reservation {
      */
     private BigDecimal total;
 
+    private String hostId;
+
     /**
      * Constructor
      */
@@ -92,6 +94,14 @@ public class Reservation {
 
     public void setTotal(BigDecimal total) {
         this.total = total;
+    }
+
+    public String getHostId() {
+        return hostId;
+    }
+
+    public void setHostId(String hostId) {
+        this.hostId = hostId;
     }
 
     @Override

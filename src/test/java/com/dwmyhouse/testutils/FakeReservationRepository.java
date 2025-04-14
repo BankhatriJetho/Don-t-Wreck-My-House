@@ -19,11 +19,14 @@ public class FakeReservationRepository extends ReservationRepository {
 
     @Override
     public List<Reservation> findByHost(String hostId) {
-        return new ArrayList<>(storage);
+        return storage.stream()
+                .filter(r -> hostId.equals(r.getHostId()))
+                .toList();
     }
 
     @Override
     public boolean add(Reservation reservation, String hostId) {
+        reservation.setHostId(hostId);
         storage.add(reservation);
         return true;
     }
@@ -42,5 +45,9 @@ public class FakeReservationRepository extends ReservationRepository {
     @Override
     public boolean delete (int reservationId, String hostId) {
         return storage.removeIf(r -> r.getId() == reservationId);
+    }
+
+    public void clearAll() {
+        storage.clear();
     }
 }
