@@ -9,6 +9,7 @@ import com.dwmyhouse.models.Reservation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import java.security.spec.RSAOtherPrimeInfo;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
@@ -193,11 +194,125 @@ public class MainController {
 
     private void editReservation(){
         System.out.println("[Edit Reservations]");
-        //more logic here for edit
+        System.out.println("Guest Email: ");
+        String guestEmail = console.nextLine().trim();
+        Guest guest = guestService.getGuestByEmail(guestEmail);
+
+        if(guest == null) {
+            System.out.println("Guest not found.");
+            return;
+        }
+
+        System.out.println("Host Email: ");
+        String hostEmail = console.nextLine().trim();
+        Host host = hostService.getHostByEmail(hostEmail);
+
+        if(host == null) {
+            System.out.println("Host not found.");
+            return;
+        }
+
+        List<Reservation> reservations = reservationService.viewReservationsForHost(host.getId());
+        List<Reservation> guestReservations = reservations.stream()
+                .filter(r -> r.getGuestId().equals(guest.getGuestId()))
+                .toList();
+
+        if(guestReservations.isEmpty()) {
+            System.out.println("No reservations found for this guest at this host.");
+            return;
+        }
+
+        for(Reservation r: guestReservations) {
+            System.out.printf("ID: %d, %s - %s%n", r.getId(), r.getStartDate(), r.getEndDate());
+        }
+
+        System.out.println("Reservation ID to edit: ");
+        int id = Integer.parseInt(console.nextLine().trim());
+
+        Reservation toEdit = guestReservations.stream()
+                .filter(r -> r.getId() == id)
+                .findFirst()
+                .orElse(null);
+
+        if(toEdit == null) {
+            System.out.println("Reservation not found.");
+            return;
+        }
+
+        System.out.printf("Start (%s): ", toEdit.getStartDate());
+        String startInput = console.nextLine().trim();
+
+        System.out.printf("End (%s): ", toEdit.getEndDate());
+        String endInput = console.nextLine().trim();
+
+        try {
+            if(!startInput.isEmpty()) {
+                toEdit.setStartDate(LocalDate.parse(startInput));
+            }
+            if(!endInput.isEmpty()) {
+                toEdit.setEndDate(LocalDate.parse(endInput));
+            }
+
+            boolean success = reservationService.editReservation(toEdit, host);
+            if(success) {
+                System.out.println("\nSummary");
+                System.out.println("===========");
+                System.out.printf("Start: %s%n", toEdit.getStartDate());
+                System.out.printf("End: %s%n", toEdit.getEndDate());
+                System.out.printf("Total: $%s%n", toEdit.getTotal());
+                System.out.println("Reservation updated successfully.");
+            } else {
+                System.out.println("Invalid reservation update. Check for overlap or bad dates.");
+            }
+        } catch (Exception e) {
+            System.out.println("Invalid input. Reservation update cancelled.");
+        }
     }
 
     private void cancelReservation() {
         System.out.println("[Cancel Reservations]");
-        //more logic here for cancellation
+        System.out.println("Guest Email: ");
+        String guestEmail = console.nextLine().trim();
+        Guest guest = guestService.getGuestByEmail(guestEmail);
+
+        if(guest == null) {
+            System.out.println("Guest not found.");
+            return;
+        }
+
+        System.out.println("Host Email: ");
+        String hostEmail = console.nextLine().trim();
+        Host host = hostService.getHostByEmail(hostEmail);
+
+        if(host == null) {
+            System.out.println("Host not found.");
+            return;
+        }
+
+        List<Reservation> reservations = reservationService.viewReservationsForHost(host.getId());
+        List<Reservation> futureGuestReservations = reservations.stream()
+                .filter(r -> r.getGuestId().equals(guest.getGuestId()))
+                .filter(r -> r.getStartDate().isAfter(LocalDate.now()))
+                .toList();
+
+        if(futureGuestReservations.isEmpty()) {
+            System.out.println("No future reservations found for this guest at this host.");
+            return;
+        }
+
+        for(Reservation r : futureGuestReservations) {
+            System.out.printf("ID: %d, %s - %s%n", r.getId(), r.getStartDate(), r.getEndDate());
+        }
+
+        System.out.println("Reservation ID to cancel: ");
+        int id = Integer.parseInt(console.nextLine().trim());
+
+        boolean success = reservationService.cancelReservation(id, host.getId());
+
+        if(success) {
+            System.out.println("Reservation cancelled successfully.");
+        } else {
+            System.out.println("Unable to cancel reservation. It may already be in the past.");
+        }
     }
 }
