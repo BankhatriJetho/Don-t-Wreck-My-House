@@ -11,7 +11,7 @@ import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ReservationServiceTest {
+public class ReservationServiceMakeTest {
 
     ReservationService service;
     FakeReservationRepository fakeRepo;
@@ -73,5 +73,65 @@ public class ReservationServiceTest {
                 null);
 
         assertFalse(service.makeReservation(reservation, testHost));
+    }
+
+    @Test
+    void shouldFailWhenGuestIdIsNull() {
+        Reservation reservation = new Reservation(0,
+                LocalDate.now().plusDays(3),
+                LocalDate.now().plusDays(5),
+                null, null);
+        reservation.setHostId(testHost.getId());
+
+        boolean result = service.makeReservation(reservation, testHost);
+        assertFalse(result);
+    }
+
+    @Test
+    void shouldFailWhenHostIdIsNull() {
+        Reservation reservation = new Reservation(0,
+                LocalDate.now().plusDays(3),
+                LocalDate.now().plusDays(5),
+                "guest-1", null);
+
+        boolean result = service.makeReservation(reservation, null);
+        assertFalse(result);
+    }
+
+    @Test
+    void shouldFailWhenStartDateAndEndDateAreSame() {
+        LocalDate day = LocalDate.now().plusDays(3);
+        Reservation reservation = new Reservation(0, day, day,"guest-1", null);
+        reservation.setHostId(testHost.getId());
+
+        boolean result = service.makeReservation(reservation, testHost);
+        assertFalse(result);
+    }
+
+    @Test
+    void shouldCalculateTotalForOneNightWeekday() {
+        LocalDate start = LocalDate.of(2025,4,16); //weekday
+        Reservation reservation = new Reservation(0, start, start.plusDays(1), "guest-1", null);
+        reservation.setHostId(testHost.getId());
+
+        boolean result = service.makeReservation(reservation, testHost);
+
+        assertTrue(result);
+        assertEquals(new BigDecimal("100"), reservation.getTotal());
+    }
+
+    @Test
+    void shouldCalculateTotalForWeekendStay() {
+        Reservation reservation = new Reservation(0,
+                LocalDate.of(2025,4,18), //Friday
+                LocalDate.of(2025,4,20), //Saturday
+                "guest-1",
+                null);
+        reservation.setHostId(testHost.getId());
+
+        boolean result = service.makeReservation(reservation, testHost);
+
+        assertTrue(result);
+        assertEquals(new BigDecimal("300"), reservation.getTotal());
     }
 }

@@ -69,6 +69,9 @@ public class ReservationService {
      * @return true if successfully cancelled
      */
     public boolean cancelReservation(int reservationId, String hostId) {
+        if(hostId == null || reservationId <= 0) {
+            return false;
+        }
         Reservation res = repository.findByHost(hostId).stream()
                 .filter(r -> r.getId() == reservationId)
                 .findFirst()
@@ -91,6 +94,9 @@ public class ReservationService {
             return false;
         }
         if(!reservation.getStartDate().isAfter(LocalDate.now())) {
+            return false;
+        }
+        if (reservation.getGuestId() == null || reservation.getGuestId().isBlank()) {
             return false;
         }
 
