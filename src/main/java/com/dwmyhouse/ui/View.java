@@ -2,7 +2,6 @@ package com.dwmyhouse.ui;
 
 import com.dwmyhouse.models.Reservation;
 
-import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;

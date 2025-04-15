@@ -75,8 +75,9 @@ public class GuestRepository {
 
     private Guest deserialize(String line) {
         String[] tokens = line.split(",", -1);
-        if(tokens.length != 6)
+        if(tokens.length != 6 || tokens[0].isBlank()) {
             return null;
+        }
 
         Guest guest = new Guest();
         guest.setGuestId(tokens[0]);
