@@ -33,8 +33,8 @@ public class ReservationServiceMakeTest {
     @Test
     void shouldMakeValidReservation() {
         Reservation reservation = new Reservation(0,
-                LocalDate.now().plusDays(3),
-                LocalDate.now().plusDays(5),
+                LocalDate.of(2025, 4, 17), //Thursday
+                LocalDate.of(2025,4,19), //Saturday
                 "guest-1",
                 null);
 
@@ -134,4 +134,6 @@ public class ReservationServiceMakeTest {
         assertTrue(result);
         assertEquals(new BigDecimal("300"), reservation.getTotal());
     }
+
+    
 }
