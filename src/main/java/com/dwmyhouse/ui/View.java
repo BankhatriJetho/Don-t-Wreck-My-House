@@ -2,6 +2,7 @@ package com.dwmyhouse.ui;
 
 import com.dwmyhouse.models.Reservation;
 
+import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
@@ -13,9 +14,25 @@ public class View {
 
     private final Scanner console = new Scanner(System.in);
 
+    public void displayMenu() {
+        System.out.println("\nMain Menu");
+        System.out.println("============");
+        System.out.println("0. Exit");
+        System.out.println("1. View Reservations for Host");
+        System.out.println("2. Make a Reservation");
+        System.out.println("3. Edit a Reservation");
+        System.out.println("4. Cancel a Reservation");
+        System.out.println("Select [0 - 4]");
+    }
+
     public void displayHeader(String header) {
         System.out.println("\n" + header);
         System.out.println("=".repeat(header.length()));
+    }
+
+    public String readMenuSelection(String prompt) {
+        System.out.print(prompt);
+        return console.nextLine().trim();
     }
 
     public String readRequiredString(String prompt) {
