@@ -1,7 +1,9 @@
 package com.dwmyhouse.ui;
 
 import com.dwmyhouse.models.Reservation;
+import jdk.dynalink.support.SimpleRelinkableCallSite;
 
+import java.io.PrintStream;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
@@ -11,7 +13,17 @@ import java.util.Scanner;
  */
 public class View {
 
-    private final Scanner console = new Scanner(System.in);
+    private final Scanner console;
+    private final PrintStream out;
+
+    public View() {
+        this(new Scanner(System.in), System.out);
+    }
+
+    public View(Scanner console, PrintStream out) {
+        this.console = console;
+        this.out = out;
+    }
 
     public void displayMenu() {
         System.out.println("\nMain Menu");
@@ -25,8 +37,8 @@ public class View {
     }
 
     public void displayHeader(String header) {
-        System.out.println("\n" + header);
-        System.out.println("=".repeat(header.length()));
+        out.println("\n" + header);
+        out.println("=".repeat(header.length()));
     }
 
     public String readMenuSelection(String prompt) {
@@ -69,20 +81,31 @@ public class View {
     }
 
     public void displayReservations(List<Reservation> reservations) {
+        if(reservations == null || reservations.isEmpty()) {
+            out.println("No reservations found.");
+            return;
+        }
         for (Reservation r : reservations) {
-            System.out.printf("ID: %d, %s - %s%n", r.getId(), r.getStartDate(), r.getEndDate());
+            out.printf("ID: %s, %s to %s, Guest ID: %s, Total: $%s%n",
+                    r.getId(),
+                    r.getStartDate(),
+                    r.getEndDate(),
+                    r.getGuestId(),
+                    r.getTotal());
         }
     }
 
     public void displayReservationSummary(Reservation r) {
-        displayHeader("Summary");
-        System.out.printf("Start: %s%n", r.getStartDate());
-        System.out.printf("End: %s%n", r.getEndDate());
-        System.out.printf("Total: $%s%n", r.getTotal());
+
+            displayHeader("Summary");
+            out.printf("Start: %s%n", r.getStartDate());
+            out.printf("End: %s%n", r.getEndDate());
+            out.printf("Total: $%s%n", r.getTotal());
+
     }
 
     public void displayMessage(String message) {
-        System.out.println(message);
+        out.println(message);
     }
 
 }
