@@ -31,4 +31,16 @@ public class HostServiceTest {
         Host host = service.getHostByEmail("nope@host.com");
         assertNull(host);
     }
+
+    @Test
+    void shouldReturnNullWhenEmailIsNull() {
+        Host host = service.getHostByEmail(null);
+        assertNull(host);
+    }
+
+    @Test
+    void shouldReturnNullWhenEmailIsEmpty() {
+        Host host = service.getHostByEmail("");
+        assertNull(host);
+    }
 }

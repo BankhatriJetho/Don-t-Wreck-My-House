@@ -40,8 +40,8 @@ public class ReservationServiceEditTest {
     @Test
     void shouldEditReservationWithValidDates() {
         Reservation toEdit = new Reservation(1,
-                LocalDate.now().plusDays(10),
-                LocalDate.now().plusDays(12),
+                LocalDate.of(2025,4,24),
+                LocalDate.of(2025,4,26),
                 "guest-1",
                 null);
         toEdit.setHostId(testHost.getId());
@@ -49,7 +49,7 @@ public class ReservationServiceEditTest {
         boolean result = service.editReservation(toEdit, testHost);
         assertTrue(result);
         assertNotNull(toEdit.getTotal());
-        assertEquals(new BigDecimal("300"), toEdit.getTotal()); // 2 nights (1 weekday, 1 weekend)
+        assertEquals(new BigDecimal("250"), toEdit.getTotal()); // 2 nights (1 weekday, 1 weekend)
     }
 
     @Test

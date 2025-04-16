@@ -90,8 +90,8 @@ public class ReservationServiceMakeTest {
     @Test
     void shouldFailWhenHostIdIsNull() {
         Reservation reservation = new Reservation(0,
-                LocalDate.now().plusDays(3),
-                LocalDate.now().plusDays(5),
+                LocalDate.of(2025,4,23),
+                LocalDate.of(2025,4,28),
                 "guest-1", null);
 
         boolean result = service.makeReservation(reservation, null);
@@ -100,7 +100,7 @@ public class ReservationServiceMakeTest {
 
     @Test
     void shouldFailWhenStartDateAndEndDateAreSame() {
-        LocalDate day = LocalDate.now().plusDays(3);
+        LocalDate day = LocalDate.of(2025,4,23);
         Reservation reservation = new Reservation(0, day, day,"guest-1", null);
         reservation.setHostId(testHost.getId());
 
@@ -110,7 +110,7 @@ public class ReservationServiceMakeTest {
 
     @Test
     void shouldCalculateTotalForOneNightWeekday() {
-        LocalDate start = LocalDate.of(2025,4,16); //weekday
+        LocalDate start = LocalDate.of(2025,4,23); //weekday
         Reservation reservation = new Reservation(0, start, start.plusDays(1), "guest-1", null);
         reservation.setHostId(testHost.getId());
 

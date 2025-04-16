@@ -38,17 +38,17 @@ public class ReservationServiceTotalTest {
     @Test
     void shouldCalculateAllWeekdays() {
         BigDecimal total = calculate(
-                LocalDate.now().plusDays(5), //Monday
-                LocalDate.now().plusDays(8) //Thursday
+                LocalDate.of(2025,4,27), //Sunday
+                LocalDate.of(2025,5,2) //Friday
         );
-        assertEquals(new BigDecimal("300"), total); //3 nights
+        assertEquals(new BigDecimal("500"), total); //5 nights
     }
 
     @Test
     void shouldCalculateAllWeekends() {
         BigDecimal total = calculate(
-                LocalDate.now().plusDays(10), //Friday
-                LocalDate.now().plusDays(12) //Sunday
+                LocalDate.of(2025,4,25), //Friday
+                LocalDate.of(2025,4,27) //Sunday
         );
         assertEquals(new BigDecimal("300"), total); // 2 weekends night
     }
@@ -56,8 +56,8 @@ public class ReservationServiceTotalTest {
     @Test
     void shouldCalculateMixedRate() {
         BigDecimal total = calculate(
-                LocalDate.now().plusDays(9), //Thursday
-                LocalDate.now().plusDays(13) //Monday
+                LocalDate.of(2025,4,24), //Thursday
+                LocalDate.of(2025,4,28) //Monday
         );
         assertEquals(new BigDecimal("500"), total); //1 weekday night + 2 weekends nights + 1 weekday night
     }
@@ -65,8 +65,8 @@ public class ReservationServiceTotalTest {
     @Test
     void shouldCalculateOneNightStay() {
         BigDecimal total = calculate(
-                LocalDate.now().plusDays(7), //Tuesday
-                LocalDate.now().plusDays(8) //Wednesday
+                LocalDate.of(2025,4,22), //Tuesday
+                LocalDate.of(2025,4,23) //Wednesday
         );
         assertEquals(new BigDecimal("100"), total); //One weekday night
     }

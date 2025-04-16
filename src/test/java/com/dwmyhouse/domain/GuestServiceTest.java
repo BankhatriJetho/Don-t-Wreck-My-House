@@ -31,4 +31,16 @@ public class GuestServiceTest {
         Guest guest = service.getGuestByEmail("nonexistent@email.com");
         assertNull(guest);
     }
+
+    @Test
+    void shouldReturnNullWhenEmailIsNull() {
+        Guest guest = service.getGuestByEmail(null);
+        assertNull(guest);
+    }
+
+    @Test
+    void shouldReturnNullWhenEmailIsEmpty() {
+        Guest guest = service.getGuestByEmail("");
+        assertNull(guest);
+    }
 }
