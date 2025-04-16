@@ -107,18 +107,33 @@ public class ReservationRepository {
      * @param line CSV line
      * @return a Reservation or null if line is invalid
      */
-    private Reservation deserialize(String line, String hostId) {
+    Reservation deserialize(String line, String hostId) {
         String[] tokens = line.split(",", -1);
         if (tokens.length != 5) return null;
 
-        Reservation r = new Reservation();
-        r.setId(Integer.parseInt(tokens[0]));
-        r.setStartDate(LocalDate.parse(tokens[1]));
-        r.setEndDate(LocalDate.parse(tokens[2]));
-        r.setGuestId(tokens[3]);
-        r.setTotal(new BigDecimal(tokens[4]));
-        r.setHostId(hostId);
-        return r;
+        try {
+            Reservation r = new Reservation();
+            r.setId(Integer.parseInt(tokens[0]));
+            r.setStartDate(LocalDate.parse(tokens[1]));
+            r.setEndDate(LocalDate.parse(tokens[2]));
+            r.setGuestId(tokens[3]);
+            r.setTotal(new BigDecimal(tokens[4]));
+            r.setHostId(hostId);
+            return r;
+        } catch (Exception e) {
+            System.out.println("Skipping bad line: " + line + " due to " + e.getMessage());
+            return null;
+        }
+    }
+
+    public String serialize(Reservation r) {
+        return String.format("%s,%s,%s,%s,%s",
+                r.getId(),
+                r.getStartDate(),
+                r.getEndDate(),
+                r.getGuestId(),
+                r.getTotal()
+        );
     }
 
     /**
