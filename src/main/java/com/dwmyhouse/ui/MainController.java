@@ -43,7 +43,7 @@ public class MainController {
 
         while(true) {
             view.displayMenu();
-            String input = view.readMenuSelection("Select [0 - 4]" );
+            String input = view.readMenuSelection("Select [0 - 4]: " );
 
             switch (input) {
                 case "1":

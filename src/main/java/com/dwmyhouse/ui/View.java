@@ -35,7 +35,6 @@ public class View {
         System.out.println("2. Make a Reservation");
         System.out.println("3. Edit a Reservation");
         System.out.println("4. Cancel a Reservation");
-        System.out.println("Select [0 - 4]");
     }
 
     public void displayHeader(String header) {
