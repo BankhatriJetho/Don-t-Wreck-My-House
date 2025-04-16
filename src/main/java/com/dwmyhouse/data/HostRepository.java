@@ -73,8 +73,13 @@ public class HostRepository {
         host.setCity(tokens[5]);
         host.setState(tokens[6]);
         host.setPostalCode(tokens[7]);
-        host.setStandardRate(new BigDecimal(tokens[8]));
-        host.setWeekendsRate(new BigDecimal(tokens[9]));
+        try{
+            host.setStandardRate(new BigDecimal(tokens[8]));
+            host.setWeekendsRate(new BigDecimal(tokens[9]));
+        } catch (NumberFormatException e) {
+            return null; //skips invalid number format
+        }
+
         return host;
     }
 }
