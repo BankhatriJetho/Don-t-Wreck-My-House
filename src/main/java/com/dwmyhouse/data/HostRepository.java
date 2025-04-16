@@ -1,6 +1,7 @@
 package com.dwmyhouse.data;
 
 import com.dwmyhouse.models.Host;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
 import java.io.BufferedReader;
@@ -19,8 +20,8 @@ public class HostRepository {
     private static final String HEADER = "id,last_name,email,phone,address,city,state,postal_code,standard_rate,weekend_rate";
     private final Path filePath;
 
-    public HostRepository(Path filePath) {
-        this.filePath = filePath;
+    public HostRepository(@Value("${host.file.path:./data/hosts.csv}") String filePath) {
+        this.filePath = Path.of(filePath);
     }
 
     /**

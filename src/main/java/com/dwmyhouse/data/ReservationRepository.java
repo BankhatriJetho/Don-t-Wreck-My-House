@@ -1,6 +1,7 @@
 package com.dwmyhouse.data;
 
 import com.dwmyhouse.models.Reservation;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
 import java.io.BufferedReader;
@@ -21,8 +22,8 @@ public class ReservationRepository {
     private static final String HEADER = "id,start_date,end_date,guest_id,total";
     private final Path reservationsDir;
 
-    public ReservationRepository(Path reservationsDir) {
-        this.reservationsDir = reservationsDir;
+    public ReservationRepository(@Value("${reservation.dir.path:./data/reservations}")String reservationsDir) {
+        this.reservationsDir = Path.of(reservationsDir);
     }
 
     /**

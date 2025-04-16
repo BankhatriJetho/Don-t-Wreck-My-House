@@ -2,6 +2,7 @@ package com.dwmyhouse.ui;
 
 import com.dwmyhouse.models.Reservation;
 import jdk.dynalink.support.SimpleRelinkableCallSite;
+import org.springframework.stereotype.Component;
 
 import java.io.PrintStream;
 import java.time.LocalDate;
@@ -11,6 +12,7 @@ import java.util.Scanner;
 /**
  * Handles all console input/output (UI Layer)
  */
+@Component
 public class View {
 
     private final Scanner console;
