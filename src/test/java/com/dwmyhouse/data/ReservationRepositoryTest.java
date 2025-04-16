@@ -21,10 +21,9 @@ public class ReservationRepositoryTest {
 
     @BeforeEach
     void setup() throws URISyntaxException {
-        directory = Paths.get(Objects.requireNonNull(getClass()
-                        .getClassLoader()
-                        .getResource("test-data/test-reservations"))
-                .toURI());
+        String directory = Paths.get(Objects.requireNonNull(getClass().getClassLoader()
+                .getResource("test-data/test-reservations")).toURI()
+        ).toString();
 
         repository = new ReservationRepository(directory);
     }

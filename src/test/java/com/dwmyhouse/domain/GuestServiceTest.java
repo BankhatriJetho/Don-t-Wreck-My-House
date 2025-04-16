@@ -15,7 +15,7 @@ public class GuestServiceTest {
 
     @BeforeEach
     void setup() {
-        GuestRepository repo = new GuestRepository(Paths.get("data/guests.csv"));
+        GuestRepository repo = new GuestRepository("data/guests.csv");
         service = new GuestService(repo);
     }
 

@@ -8,6 +8,7 @@ import java.net.URISyntaxException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -17,9 +18,9 @@ public class HostRepositoryTest {
 
     @BeforeEach
     void setup() throws Exception {
-        Path path = Paths.get(getClass().getClassLoader()
-                .getResource("test-data/test-hosts.csv")
-                .toURI());
+        String path = Paths.get(Objects.requireNonNull(getClass().getClassLoader()
+                .getResource("test-data/test-hosts.csv")).toURI()
+        ).toString();
         repository = new HostRepository(path);
     }
 
@@ -50,9 +51,10 @@ public class HostRepositoryTest {
 
     @Test
     void shouldSkipInvalidLinesInCsv() throws URISyntaxException {
-        Path path = Paths.get(getClass().getClassLoader()
-                .getResource("test-data/test-hosts-invalid.csv")
-                .toURI());
+        String path = Paths.get(
+                Objects.requireNonNull(getClass().getClassLoader()
+                .getResource("test-data/test-hosts-invalid.csv")).toURI()
+        ).toString();
 
         HostRepository repo = new HostRepository(path);
         List<Host> result = repo.findAll();
@@ -61,7 +63,7 @@ public class HostRepositoryTest {
 
     @Test
     void shouldReturnEmptyListWhenFileMissing() throws URISyntaxException {
-        HostRepository repo = new HostRepository(Paths.get("./not-a-real-file.csv"));
+        HostRepository repo = new HostRepository("./not-a-real-file.csv");
         List<Host> result = repo.findAll();
         assertTrue(result.isEmpty());
     }

@@ -10,6 +10,7 @@ import java.net.URISyntaxException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -19,9 +20,9 @@ public class GuestRepositoryTest {
 
     @BeforeEach
     void setup() throws URISyntaxException {
-        Path path = Paths.get(getClass().getClassLoader()
-                .getResource("test-data/test-guests.csv")
-                .toURI());
+        String path = Paths.get(Objects.requireNonNull(getClass().getClassLoader()
+                .getResource("test-data/test-guests.csv")).toURI()
+        ).toString();
         repository = new GuestRepository(path);
     }
 
@@ -52,7 +53,7 @@ public class GuestRepositoryTest {
 
     @Test
     void shouldReturnEmptyListIfFileMissing() {
-        Path fakePath = Paths.get("src/test/resources/test-data/file-doesn't-exist.csv");
+        String fakePath = "src/test/resources/test-data/file-doesn't-exist.csv";
         GuestRepository badRepo = new GuestRepository(fakePath);
         List<Guest> result = badRepo.findAll();
         assertTrue(result.isEmpty());

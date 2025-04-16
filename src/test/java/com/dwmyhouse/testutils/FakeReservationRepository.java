@@ -14,7 +14,7 @@ public class FakeReservationRepository extends ReservationRepository {
     private final List<Reservation> storage = new ArrayList<>();
 
     public FakeReservationRepository() {
-        super(null); //we are not using the actual file
+        super("src/test/resources/test-data/test-reservations");
     }
 
     @Override

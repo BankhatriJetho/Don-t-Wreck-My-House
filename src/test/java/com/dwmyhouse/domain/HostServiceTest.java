@@ -15,7 +15,7 @@ public class HostServiceTest {
 
     @BeforeEach
     void setup() {
-        HostRepository repo = new HostRepository(Paths.get("data/hosts.csv"));
+        HostRepository repo = new HostRepository("data/hosts.csv");
         service = new HostService(repo);
     }
 
