@@ -61,9 +61,6 @@ public class HostRepositoryTest {
 
     @Test
     void shouldReturnEmptyListWhenFileMissing() throws URISyntaxException {
-        Path path = Paths.get(getClass().getClassLoader()
-                .getResource("test-data/not-a-real-file.csv")
-                .toURI());
         HostRepository repo = new HostRepository(Paths.get("./not-a-real-file.csv"));
         List<Host> result = repo.findAll();
         assertTrue(result.isEmpty());
