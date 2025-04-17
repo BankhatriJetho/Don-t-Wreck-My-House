@@ -30,6 +30,7 @@ public class HostService {
     }
 
     /**
+     * For stretch goal-- unused now
      * Returns all hosts
      * @return List of hosts
      */

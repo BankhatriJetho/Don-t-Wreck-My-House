@@ -80,7 +80,7 @@ public class ViewTest {
         view.displayHeader("== My Reservations ==");
 
         String printed = output.toString().trim();
-        assertTrue(printed.contains("== My Reservations =="), "Should contain header lines");
+        assertTrue(printed.contains("MY RESERVATIONS"), "Should contain header lines");
     }
 
     @Test
@@ -125,7 +125,8 @@ public class ViewTest {
         view.displayReservationSummary(r);
         String printed = output.toString().trim();
 
-        assertTrue(printed.contains("Summary"));
+        assertTrue(printed.toUpperCase().contains("SUMMARY"));
+        assertTrue(printed.contains("======================================"));
         assertTrue(printed.contains("Start: 2025-05-01"));
         assertTrue(printed.contains("End: 2025-05-04"));
         assertTrue(printed.contains("Total: $600.00"));

@@ -33,8 +33,8 @@ public class ReservationServiceMakeTest {
     @Test
     void shouldMakeValidReservation() {
         Reservation reservation = new Reservation(0,
-                LocalDate.of(2025, 4, 17), //Thursday
-                LocalDate.of(2025,4,19), //Saturday
+                LocalDate.of(2025, 4, 24), //Thursday
+                LocalDate.of(2025,4,26), //Saturday
                 "guest-1",
                 null);
 
