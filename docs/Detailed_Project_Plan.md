@@ -71,7 +71,10 @@ Each operation is triggered through `MainController` and calls into services and
 - No Overlapping reservations for the same host
 - Guests and Hosts must exist in their respective files
 
+----------------------------------------
+
 ## Data Design Provided
+
 ### Guest CSV Format
 ````
 guest_id,first_name,last_name,email,phone,state
@@ -89,6 +92,7 @@ One file per host: `reservations/hostId.csv`
 id,start_date,end_date,guest_id,total
 
 ````
+----------------------------------------
 
 ## Testing Strategy
 - Unit tests for each repository and service
