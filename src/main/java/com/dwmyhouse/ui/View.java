@@ -134,7 +134,7 @@ public class View {
             return;
         }
         for (Reservation r : reservations) {
-            out.printf("ID: %s, Dates: %s to %s, Guest ID: %s, Total: $%s%n",
+            out.printf("ID: %-3d | Dates: %-10s to %-10s | Guest ID: %-5s | Total: $%-5s%n",
                     r.getId(),
                     r.getStartDate(),
                     r.getEndDate(),

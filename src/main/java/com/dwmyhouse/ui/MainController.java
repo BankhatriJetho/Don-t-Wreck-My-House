@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -86,6 +87,7 @@ public class MainController {
 
         // Retrieve and filter reservations for the host
         List<Reservation> reservations = reservationService.viewReservationsForHost(host.getId());
+        reservations.sort(Comparator.comparing(Reservation::getStartDate));
 
         if(reservations.isEmpty()) {
             view.displayMessage("No reservations found for this host.");
@@ -100,7 +102,7 @@ public class MainController {
 
             String guestEmail = (guest != null) ? guest.getEmail() : "???";
 
-            System.out.printf("ID: %d, %s - %s, Guest: %s, Email: %s%n",
+            System.out.printf("ID: %-3d | Date: %-10s to %-10s | Guest: %-25s | Email: %-30s%n",
                     r.getId(),
                     r.getStartDate(),
                     r.getEndDate(),
@@ -131,6 +133,7 @@ public class MainController {
         }
 
         List<Reservation> reservations = reservationService.viewReservationsForHost(host.getId());
+        reservations.sort(Comparator.comparing(Reservation::getStartDate));
         view.displayReservations(reservations); //Show existing reservation for that host
         view.displayHeader(host.getLastName() + ": " + host.getCity() + ", " + host.getState());
 
@@ -169,7 +172,7 @@ public class MainController {
      * Requires guest and host match, and only allows valid changes.
      */
     private void editReservation(){
-        view.displayHeader("Edit e Reservation");
+        view.displayHeader("Edit a Reservation");
         String guestEmail = view.readValidEmail("Guest Email: ");
         Guest guest = guestService.getGuestByEmail(guestEmail);
         if(guest == null) {
@@ -186,6 +189,7 @@ public class MainController {
 
         //Filter reservations for this guest-host combination
         List<Reservation> reservations = reservationService.viewReservationsForHost(host.getId());
+        reservations.sort(Comparator.comparing(Reservation::getStartDate));
         List<Reservation> guestReservations = reservations.stream()
                 .filter(r -> r.getGuestId().equals(guest.getGuestId()))
                 .toList();
@@ -252,6 +256,7 @@ public class MainController {
 
         //Filter and retrieve guest's future reservations with that host
         List<Reservation> reservations = reservationService.viewReservationsForHost(host.getId());
+        reservations.sort(Comparator.comparing(Reservation::getStartDate));
         List<Reservation> futureGuestReservations = reservations.stream()
                 .filter(r -> r.getGuestId().equals(guest.getGuestId()))
                 .filter(r -> r.getStartDate().isAfter(LocalDate.now()))
