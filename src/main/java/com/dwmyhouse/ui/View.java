@@ -34,14 +34,18 @@ public class View {
         System.out.println("============");
         System.out.println("0. Exit");
         System.out.println("1. View Reservations for Host");
-        System.out.println("2. Make a Reservation");
+        System.out.println("2. Add/Make a Reservation");
         System.out.println("3. Edit a Reservation");
         System.out.println("4. Cancel a Reservation");
+        System.out.println();
     }
 
     public void displayHeader(String header) {
-        out.println("\n" + header);
-        out.println("=".repeat(header.length()));
+        //out.println("\n" + header);
+        out.println("\n" + "=".repeat(40));
+        out.printf("%20s%n", header.toUpperCase());
+        out.println("=".repeat(40));
+        //out.println("=".repeat(header.length()));
     }
 
     public String readMenuSelection(String prompt) {
@@ -58,9 +62,16 @@ public class View {
         return result;
     }
 
-    public String readString(String prompt) {
-        System.out.print(prompt);
-        return console.nextLine().trim();
+    public String readValidEmail(String prompt) {
+        String input;
+        while (true) {
+            input = readRequiredString(prompt);
+            if(input.matches("^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$")) {
+                return input;
+            } else {
+                displayMessage("Invalid email format. Please enter a valid email address.");
+            }
+        }
     }
 
     public LocalDate readDate(String prompt, LocalDate defaultValue) {
@@ -85,7 +96,7 @@ public class View {
     public LocalDate readDate(String prompt) {
         LocalDate result = null;
         while (result == null) {
-            String input = readRequiredString(prompt + " (yy-MM-dd): ");
+            String input = readRequiredString(prompt);
             try {
                 result = LocalDate.parse(input, FLEXIBLE_DATE);
             } catch (DateTimeParseException ex) {
@@ -107,7 +118,7 @@ public class View {
             return;
         }
         for (Reservation r : reservations) {
-            out.printf("ID: %s, %s to %s, Guest ID: %s, Total: $%s%n",
+            out.printf("ID: %s, Dates: %s to %s, Guest ID: %s, Total: $%s%n",
                     r.getId(),
                     r.getStartDate(),
                     r.getEndDate(),

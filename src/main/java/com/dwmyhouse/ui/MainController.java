@@ -24,7 +24,6 @@ public class MainController {
     private final HostService hostService;
     private final ReservationService reservationService;
     private final View view;
-    private final Scanner console = new Scanner(System.in);
 
     @Autowired
     public MainController(GuestService guestService, HostService hostService,
@@ -39,7 +38,9 @@ public class MainController {
      * Entry point of the application. Displays the main menu and handles user actions.
      */
     public void run() {
-        view.displayMessage("Welcome to Don't Wreck My House");
+        view.displayHeader("Welcome to Don't Wreck My House");
+        System.out.println();
+        view.displayMessage("Select from the Menu below to continue.");
 
         while(true) {
             view.displayMenu();
@@ -59,6 +60,7 @@ public class MainController {
                     cancelReservation();
                     break;
                 case "0":
+                    view.displayHeader("Exiting....");
                     view.displayMessage("Good Bye!");
                     return;
                 default:
@@ -68,7 +70,8 @@ public class MainController {
     }
 
     private void viewReservations() {
-        String email = view.readRequiredString("Host Email: ");
+        view.displayHeader("View Reservations for Host");
+        String email = view.readValidEmail("Host Email: ");
         Host host = hostService.getHostByEmail(email);
 
         if(host == null) {
@@ -102,15 +105,15 @@ public class MainController {
     }
 
     private void makeReservation() {
-
-        String guestEmail = view.readRequiredString("Guest Email: ");
+        view.displayHeader("Add/Make a Reservation");
+        String guestEmail = view.readValidEmail("Guest Email: ");
         Guest guest = guestService.getGuestByEmail(guestEmail);
         if(guest == null) {
             view.displayMessage("Guess not found.");
             return;
         }
 
-        String hostEmail = view.readRequiredString("Host Email: ");
+        String hostEmail = view.readValidEmail("Host Email: ");
         Host host = hostService.getHostByEmail(hostEmail);
         if(host == null) {
             System.out.println("Host not found.");
@@ -152,14 +155,15 @@ public class MainController {
     }
 
     private void editReservation(){
-        String guestEmail = view.readRequiredString("Guest Email: ");
+        view.displayHeader("Edit e Reservation");
+        String guestEmail = view.readValidEmail("Guest Email: ");
         Guest guest = guestService.getGuestByEmail(guestEmail);
         if(guest == null) {
             System.out.println("Guest not found.");
             return;
         }
 
-        String hostEmail = view.readRequiredString("Host Email: ");
+        String hostEmail = view.readValidEmail("Host Email: ");
         Host host = hostService.getHostByEmail(hostEmail);
         if(host == null) {
             System.out.println("Host not found.");
@@ -200,7 +204,7 @@ public class MainController {
             boolean success = reservationService.editReservation(toEdit, host);
             if(success) {
                 view.displayReservationSummary(toEdit);
-                view.displayMessage("Reservation updated successfully.");
+                view.displayMessage("Reservation " + toEdit.getId() + " updated successfully.");
             } else {
                 view.displayMessage("Reservation update failed. Check for bad dates.");
             }
@@ -210,7 +214,8 @@ public class MainController {
     }
 
     private void cancelReservation() {
-        String guestEmail = view.readRequiredString("Guest Email: ");
+        view.displayMessage("Cancel a Reservation");
+        String guestEmail = view.readValidEmail("Guest Email: ");
         Guest guest = guestService.getGuestByEmail(guestEmail);
 
         if(guest == null) {
@@ -218,7 +223,7 @@ public class MainController {
             return;
         }
 
-        String hostEmail = view.readRequiredString("Host Email: ");
+        String hostEmail = view.readValidEmail("Host Email: ");
         Host host = hostService.getHostByEmail(hostEmail);
 
         if(host == null) {
