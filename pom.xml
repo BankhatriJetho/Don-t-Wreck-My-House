@@ -16,7 +16,6 @@
 
     <build>
         <plugins>
-            <!-- Maven compiler plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -30,14 +29,12 @@
     </build>
 
     <dependencies>
-        <!-- Spring Context for @Component, @Service, @Repository -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>5.3.34</version>
         </dependency>
 
-        <!-- JUnit5 -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
