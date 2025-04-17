@@ -202,7 +202,7 @@ public class MainController {
                 view.displayReservationSummary(toEdit);
                 view.displayMessage("Reservation updated successfully.");
             } else {
-                view.displayMessage("Invalid reservation update. Check for overlap or bad dates.");
+                view.displayMessage("Reservation update failed. Check for bad dates.");
             }
         } catch (Exception e) {
             view.displayMessage("Invalid input. Reservation update cancelled.");

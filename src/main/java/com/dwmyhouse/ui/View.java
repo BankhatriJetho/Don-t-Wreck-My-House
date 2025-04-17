@@ -1,7 +1,6 @@
 package com.dwmyhouse.ui;
 
 import com.dwmyhouse.models.Reservation;
-import jdk.dynalink.support.SimpleRelinkableCallSite;
 import org.springframework.stereotype.Component;
 
 import java.io.PrintStream;
@@ -17,7 +16,7 @@ import java.util.Scanner;
 @Component
 public class View {
 
-    private static final DateTimeFormatter FLEXIBLE_DATE = DateTimeFormatter.ofPattern("yyy-M-d");
+    private static final DateTimeFormatter FLEXIBLE_DATE = DateTimeFormatter.ofPattern("yyyy-M-d");
     private final Scanner console;
     private final PrintStream out;
 
@@ -65,12 +64,22 @@ public class View {
     }
 
     public LocalDate readDate(String prompt, LocalDate defaultValue) {
-        System.out.printf("%s (%s): ", prompt, defaultValue);
-        String input = console.nextLine().trim();
-        if (input.isEmpty()) {
-            return defaultValue;
+        LocalDate result = null;
+        while (result == null) {
+            System.out.printf("%s (%s): ", prompt, defaultValue);
+            String input = console.nextLine().trim();
+            if (input.isEmpty()) {
+                return defaultValue;
+            }
+
+            try {
+                result = LocalDate.parse(input,FLEXIBLE_DATE);
+            } catch (DateTimeParseException ex) {
+                displayMessage("Invalid Date Format.");
+            }
         }
-        return LocalDate.parse(input);
+
+        return result;
     }
 
     public LocalDate readDate(String prompt) {
