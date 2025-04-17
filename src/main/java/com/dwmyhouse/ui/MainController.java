@@ -117,32 +117,22 @@ public class MainController {
             return;
         }
 
-        //checking what dates are already booked so admin doesn't cause overlaps
         List<Reservation> reservations = reservationService.viewReservationsForHost(host.getId());
+        view.displayReservations(reservations);
         view.displayHeader(host.getLastName() + ": " + host.getCity() + ", " + host.getState());
-
-        for (Reservation r : reservations) {
-            if (r.getStartDate().isAfter(LocalDate.now())) {
-                Guest resGuest = guestService.getGuestById(r.getGuestId());
-                String guestName = (resGuest != null)
-                        ? resGuest.getLastName() + ", " + resGuest.getFirstName()
-                        : "Unknown Guest";
-                String guestEmailDisplay = (resGuest != null) ? resGuest.getEmail() : "???";
-
-                System.out.printf("ID: %d, %s - %s, Guest: %s, Email: %s%n",
-                        r.getId(),
-                        r.getStartDate(),
-                        r.getEndDate(),
-                        guestName,
-                        guestEmailDisplay);
-            }
-        }
 
         try {
             LocalDate start = view.readDate("Start (yyyy-MM-dd): ");
             LocalDate end = view.readDate("End (yyyy-MM-dd): ");
 
             Reservation newRes = new Reservation(0, start, end, guest.getGuestId(),null);
+
+            if(!start.isAfter(LocalDate.now()) || !end.isAfter(start)) {
+                view.displayReservationSummary(newRes);
+                view.displayMessage("Reservation must be in the future.");
+                return;
+            }
+
             boolean success = reservationService.makeReservation(newRes, host);
 
             if(success) {

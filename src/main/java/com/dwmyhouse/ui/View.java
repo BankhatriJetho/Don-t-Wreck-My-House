@@ -6,6 +6,8 @@ import org.springframework.stereotype.Component;
 
 import java.io.PrintStream;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -15,6 +17,7 @@ import java.util.Scanner;
 @Component
 public class View {
 
+    private static final DateTimeFormatter FLEXIBLE_DATE = DateTimeFormatter.ofPattern("yyy-M-d");
     private final Scanner console;
     private final PrintStream out;
 
@@ -71,8 +74,16 @@ public class View {
     }
 
     public LocalDate readDate(String prompt) {
-        System.out.print(prompt);
-        return LocalDate.parse(console.nextLine().trim());
+        LocalDate result = null;
+        while (result == null) {
+            String input = readRequiredString(prompt + " (yy-MM-dd): ");
+            try {
+                result = LocalDate.parse(input, FLEXIBLE_DATE);
+            } catch (DateTimeParseException ex) {
+                displayMessage("Invalid date format.");
+            }
+        }
+        return result;
     }
 
     public boolean confirm(String prompt) {
@@ -101,8 +112,11 @@ public class View {
             displayHeader("Summary");
             out.printf("Start: %s%n", r.getStartDate());
             out.printf("End: %s%n", r.getEndDate());
-            out.printf("Total: $%s%n", r.getTotal());
-
+            if(!(r.getTotal() == null)) {
+                out.printf("Total: $%s%n", r.getTotal());
+            } else {
+                out.printf("Total: $%s%n", 0.00);
+            }
     }
 
     public void displayMessage(String message) {
