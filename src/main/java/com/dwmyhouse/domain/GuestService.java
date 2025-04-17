@@ -38,11 +38,4 @@ public class GuestService {
         return repository.findById(id);
     }
 
-    /**
-     * Returns all guests
-     * @return List of guests
-     */
-    public List<Guest> findAll() {
-        return repository.findAll();
-    }
 }

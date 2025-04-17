@@ -27,7 +27,8 @@ public class ReservationRepository {
     }
 
     /**
-     * Loads all the reservation for the given host.
+     * Loads all the reservations for the given host ID from its corresponding file.
+     * Skips invalid lines
      * @param hostId the host's ID
      * @return list of all reservations for that host
      */
@@ -105,8 +106,7 @@ public class ReservationRepository {
 
     /**
      * Converts a line of CSV into a Reservation object.
-     * @param line CSV line
-     * @return a Reservation or null if line is invalid
+     * Returns a Reservation or null if line is invalid
      */
     Reservation deserialize(String line, String hostId) {
         String[] tokens = line.split(",", -1);
@@ -127,6 +127,12 @@ public class ReservationRepository {
         }
     }
 
+    /**
+     * Used for testing/debugging
+     * Converts a Reservation object into a CSV line format
+     * @param r reservation
+     * @return comma-separated string
+     */
     public String serialize(Reservation r) {
         return String.format("%s,%s,%s,%s,%s",
                 r.getId(),

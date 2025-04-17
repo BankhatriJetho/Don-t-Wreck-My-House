@@ -12,23 +12,29 @@ import java.util.Scanner;
 
 /**
  * Handles all console input/output (UI Layer)
+ * This class is responsible for user interaction like
+ * showing menus, reading inputs, and displaying results.
  */
 @Component
 public class View {
 
+    // Date format used for flexible date input like "2025-4-21"
     private static final DateTimeFormatter FLEXIBLE_DATE = DateTimeFormatter.ofPattern("yyyy-M-d");
-    private final Scanner console;
-    private final PrintStream out;
+    private final Scanner console; //For reading user input
+    private final PrintStream out; //For printing output
 
+    // Default constructor using System.in and System.out
     public View() {
         this(new Scanner(System.in), System.out);
     }
 
+    //Constructor for injecting custom Scanner and PrintStream (used in tests)
     public View(Scanner console, PrintStream out) {
         this.console = console;
         this.out = out;
     }
 
+    // Displays the main Menu with user options
     public void displayMenu() {
         System.out.println("\nMain Menu");
         System.out.println("============");
@@ -40,6 +46,7 @@ public class View {
         System.out.println();
     }
 
+    // Displays a centered and formatted section header
     public void displayHeader(String header) {
         //out.println("\n" + header);
         out.println("\n" + "=".repeat(40));
@@ -48,11 +55,13 @@ public class View {
         //out.println("=".repeat(header.length()));
     }
 
+    // Reads a trimmed string input for menu selection
     public String readMenuSelection(String prompt) {
         System.out.print(prompt);
         return console.nextLine().trim();
     }
 
+    // Prompts until a non-block string is entered
     public String readRequiredString(String prompt) {
         String result;
         do {
@@ -62,10 +71,13 @@ public class View {
         return result;
     }
 
+    // Validates email input format and prompts until valid
     public String readValidEmail(String prompt) {
         String input;
         while (true) {
             input = readRequiredString(prompt);
+
+            // Regex ensures proper email structure like validemail@example.com
             if(input.matches("^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$")) {
                 return input;
             } else {
@@ -74,6 +86,7 @@ public class View {
         }
     }
 
+    // Reads a date input, allows default if left empty
     public LocalDate readDate(String prompt, LocalDate defaultValue) {
         LocalDate result = null;
         while (result == null) {
@@ -93,6 +106,7 @@ public class View {
         return result;
     }
 
+    // Reads and validates a date input
     public LocalDate readDate(String prompt) {
         LocalDate result = null;
         while (result == null) {
@@ -106,12 +120,14 @@ public class View {
         return result;
     }
 
+    // Prompts for yes/no confirmation, returns true for y or Y
     public boolean confirm(String prompt) {
         System.out.print(prompt);
         String input = console.nextLine().trim();
         return input.equalsIgnoreCase("y");
     }
 
+    // Displays a list of reservations in a readable format
     public void displayReservations(List<Reservation> reservations) {
         if(reservations == null || reservations.isEmpty()) {
             out.println("No reservations found.");
@@ -127,6 +143,7 @@ public class View {
         }
     }
 
+    // Formats and displays a single reservation summary
     public void displayReservationSummary(Reservation r) {
 
             displayHeader("Summary");
@@ -139,6 +156,7 @@ public class View {
             }
     }
 
+    // Displays any generic message to user
     public void displayMessage(String message) {
         out.println(message);
     }

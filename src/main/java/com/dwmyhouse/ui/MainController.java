@@ -35,14 +35,15 @@ public class MainController {
     }
 
     /**
-     * Entry point of the application. Displays the main menu and handles user actions.
+     * Entry point of the application.
+     * Displays the main menu and handles user actions.
      */
     public void run() {
         view.displayHeader("Welcome to Don't Wreck My House");
         System.out.println();
         view.displayMessage("Select from the Menu below to continue.");
 
-        while(true) {
+        while(true) { //Displays menu and read user selection
             view.displayMenu();
             String input = view.readMenuSelection("Select [0 - 4]: " );
 
@@ -69,6 +70,10 @@ public class MainController {
         }
     }
 
+    /**
+     * Handles the flow to view reservations for a given host
+     * Displays existing reservations and guest info if found
+     */
     private void viewReservations() {
         view.displayHeader("View Reservations for Host");
         String email = view.readValidEmail("Host Email: ");
@@ -79,6 +84,7 @@ public class MainController {
             return;
         }
 
+        // Retrieve and filter reservations for the host
         List<Reservation> reservations = reservationService.viewReservationsForHost(host.getId());
 
         if(reservations.isEmpty()) {
@@ -88,7 +94,7 @@ public class MainController {
 
         view.displayHeader(host.getLastName() + ": " + host.getCity() + ", " + host.getState());
 
-        for(var r : reservations) {
+        for(var r : reservations) { // Loop through reservations and print guest details
             Guest guest = guestService.getGuestById(r.getGuestId());
             String guestName = (guest != null) ? guest.getLastName() + ", " + guest.getFirstName() : "Unknown Guest";
 
@@ -104,12 +110,16 @@ public class MainController {
         }
     }
 
+    /**
+     * Guides user through creating a new reservation
+     * Validates date format and business rules before saving
+     */
     private void makeReservation() {
         view.displayHeader("Add/Make a Reservation");
         String guestEmail = view.readValidEmail("Guest Email: ");
         Guest guest = guestService.getGuestByEmail(guestEmail);
         if(guest == null) {
-            view.displayMessage("Guess not found.");
+            view.displayMessage("Guest not found.");
             return;
         }
 
@@ -121,7 +131,7 @@ public class MainController {
         }
 
         List<Reservation> reservations = reservationService.viewReservationsForHost(host.getId());
-        view.displayReservations(reservations);
+        view.displayReservations(reservations); //Show existing reservation for that host
         view.displayHeader(host.getLastName() + ": " + host.getCity() + ", " + host.getState());
 
         try {
@@ -154,6 +164,10 @@ public class MainController {
 
     }
 
+    /**
+     * Allows user to modify an existing reservation.
+     * Requires guest and host match, and only allows valid changes.
+     */
     private void editReservation(){
         view.displayHeader("Edit e Reservation");
         String guestEmail = view.readValidEmail("Guest Email: ");
@@ -170,6 +184,7 @@ public class MainController {
             return;
         }
 
+        //Filter reservations for this guest-host combination
         List<Reservation> reservations = reservationService.viewReservationsForHost(host.getId());
         List<Reservation> guestReservations = reservations.stream()
                 .filter(r -> r.getGuestId().equals(guest.getGuestId()))
@@ -213,6 +228,10 @@ public class MainController {
         }
     }
 
+    /**
+     * Handles reservation cancellation logic.
+     * Only allows cancelling future reservations for matched guest and host.
+     */
     private void cancelReservation() {
         view.displayMessage("Cancel a Reservation");
         String guestEmail = view.readValidEmail("Guest Email: ");
@@ -231,6 +250,7 @@ public class MainController {
             return;
         }
 
+        //Filter and retrieve guest's future reservations with that host
         List<Reservation> reservations = reservationService.viewReservationsForHost(host.getId());
         List<Reservation> futureGuestReservations = reservations.stream()
                 .filter(r -> r.getGuestId().equals(guest.getGuestId()))
@@ -242,6 +262,7 @@ public class MainController {
             return;
         }
 
+        //Display reservations
         view.displayReservations(futureGuestReservations);
 
         try {

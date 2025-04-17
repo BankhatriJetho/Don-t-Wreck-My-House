@@ -30,6 +30,7 @@ public class ReservationService {
      * @return List of reservations
      */
     public List<Reservation> viewReservationsForHost(String hostId) {
+        // Fetches all reservations associated with the given host ID
         return repository.findByHost(hostId);
     }
 
@@ -40,8 +41,11 @@ public class ReservationService {
      * @return true if reservation was successful
      */
     public boolean makeReservation(Reservation reservation, Host host ) {
-        if(!isValid(reservation, host))
+        if(!isValid(reservation, host)) { //Validates reservation
             return false;
+        }
+
+        //If valid, calculate total
         reservation.setTotal(calculateTotal(reservation, host));
         return repository.add(reservation, host.getId());
     }
@@ -57,6 +61,7 @@ public class ReservationService {
         if(!isValid(reservation, host)) {
             return false;
         }
+        // Recalculate total and update the reservation in the repository
         reservation.setTotal(calculateTotal(reservation, host));
 
         return repository.update(reservation, host.getId());
@@ -83,6 +88,17 @@ public class ReservationService {
         return repository.delete(reservationId, hostId);
     }
 
+    /**
+     * Validates reservation details and checks for overlaps.
+     * Validation includes:
+     * -Non-null values
+     * -Guest ID present
+     * -Start date is before end date and in the future
+     * -No overlap with other reservations for the same host
+     * @param reservation the reservation to validate
+     * @param host the host whose calendar is being validated
+     * @return true if valid
+     */
     private boolean isValid(Reservation reservation, Host host) {
         if(reservation == null || host == null) {
             return false;
@@ -111,11 +127,18 @@ public class ReservationService {
         return true;
     }
 
+    /**
+     *Checks if two reservations overlap by comparing date ranges.
+     */
     private boolean datesOverlap(Reservation r1, Reservation r2) {
         return !r1.getEndDate().isBefore(r2.getStartDate()) &&
                 !r1.getStartDate().isAfter(r2.getEndDate());
     }
 
+    /**
+     *Calculates the total cost of a reservation based on host's rates.
+     * Applies standard rate on Sun-Thu, weekend rate on Fri & Sat
+     */
     private BigDecimal calculateTotal(Reservation reservation, Host host) {
         BigDecimal total = BigDecimal.ZERO;
         LocalDate date = reservation.getStartDate();
@@ -132,6 +155,9 @@ public class ReservationService {
         return total;
     }
 
+    /**
+     *Determine if a given date is considered a weekend
+     */
     private boolean isWeekend(LocalDate date) {
         DayOfWeek day = date.getDayOfWeek();
         return day == DayOfWeek.FRIDAY || day == DayOfWeek.SATURDAY;

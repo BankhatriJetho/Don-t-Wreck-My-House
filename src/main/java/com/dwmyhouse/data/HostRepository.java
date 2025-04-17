@@ -26,6 +26,7 @@ public class HostRepository {
 
     /**
      * Loads all Hosts from the hosts.csv file
+     * Skips header and corrupt entries
      * @return list of all Hosts
      */
     public List<Host> findAll() {
@@ -61,6 +62,10 @@ public class HostRepository {
                 .orElse(null);
     }
 
+    /**
+     *Parses a single line of CSV into a Host object
+     * Returns null if parsing fails or invalid
+     */
     private Host deserialize(String line) {
         String[] tokens = line.split(",", -1);
         if (tokens.length != 10) return null;

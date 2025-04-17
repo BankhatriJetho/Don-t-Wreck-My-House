@@ -10,7 +10,6 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
  * Repository for reading Guest data from guests.csv
  */
@@ -27,6 +26,7 @@ public class GuestRepository {
 
     /**
      * Loads all guests from the CSV file
+     * Skips header and invalid/corrupt lines
      * @return list of all guests
      */
     public List<Guest> findAll() {
@@ -74,6 +74,10 @@ public class GuestRepository {
                 .orElse(null);
     }
 
+    /**
+     *Converts a line of guest CSv into a Guest object.
+     * Returns null if line is invalid or malformed.
+     */
     private Guest deserialize(String line) {
         String[] tokens = line.split(",", -1);
         if(tokens.length != 6 || tokens[0].isBlank()) {
