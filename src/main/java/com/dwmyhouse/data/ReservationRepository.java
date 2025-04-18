@@ -69,7 +69,7 @@ public class ReservationRepository {
      */
     public boolean add(Reservation reservation, String hostId) {
         List<Reservation> existing = findByHost(hostId);
-        reservation.setId(nextId(existing));
+        reservation.setId(generateGlobalId());
         existing.add(reservation);
         return writeAll(existing, hostId);
     }
@@ -169,15 +169,40 @@ public class ReservationRepository {
     }
 
     /**
-     * Calculates the next reservation ID based on the existing list.
-     * @param reservations current reservations for the host
-     * @return the next available reservation ID
+     * Scans all reservation files and returns the next available global reservation ID
      */
-    private int nextId(List<Reservation> reservations) {
-        return reservations.stream()
-                .mapToInt(Reservation::getId)
-                .max()
-                .orElse(0) + 1;
+    int generateGlobalId() {
+        int maxId = 0;
+        try {
+            if (reservationsDir.toFile().exists()) {
+                for(var file : reservationsDir.toFile().listFiles((dir,name) -> name.endsWith(".csv"))) {
+                    try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+                        String line;
+                        boolean isFirst = true;
+                        while ((line = reader.readLine()) != null) {
+                            if(isFirst && line.equalsIgnoreCase(HEADER)) {
+                                isFirst = false;
+                                continue;
+                            }
+                            String[] tokens = line.split(",", -1);
+                            if(tokens.length == 5) {
+                                try {
+                                    int id = Integer.parseInt(tokens[0]);
+                                    if (id > maxId) {
+                                        maxId = id;
+                                    }
+                                } catch (NumberFormatException  ignored) {
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Error generating global reservation ID: " + e.getMessage());
+        }
+        return maxId + 1;
     }
 
 }
