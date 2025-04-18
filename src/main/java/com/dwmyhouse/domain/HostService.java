@@ -37,4 +37,16 @@ public class HostService {
     public List<Host> findAll() {
         return repository.findAll();
     }
+
+    public boolean addHost(Host host) {
+        return repository.add(host);
+    }
+
+    public boolean updateHost(Host host) {
+        return repository.update(host);
+    }
+
+    public boolean deleteHost(String hostId) {
+        return repository.delete(hostId);
+    }
 }

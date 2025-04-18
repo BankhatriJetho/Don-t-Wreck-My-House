@@ -9,7 +9,9 @@ import com.dwmyhouse.models.Reservation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
@@ -63,6 +65,9 @@ public class MainController {
                     break;
                 case "5":
                     manageGuests();
+                    break;
+                case "6":
+                    manageHosts();
                     break;
                 case "0":
                     view.displayHeader("Exiting....");
@@ -359,5 +364,128 @@ public class MainController {
             view.displayMessage("Delete failed.");
         }
     }
+
+    private void manageHosts() {
+        while (true) {
+            view.displayHostMenu();
+            String choice = view.readMenuSelection("Select [0 - 4]: ");
+
+            switch (choice) {
+                case "1":
+                    viewAllHosts();
+                    break;
+                case "2":
+                    addHost();
+                    break;
+                case "3":
+                    updateHost();
+                    break;
+                case "4":
+                    deleteHost();
+                    break;
+                case "0":
+                    return;
+                default:
+                    view.displayMessage("Invalid selection. Try again.");
+            }
+        }
+    }
+
+    private void viewAllHosts() {
+        List<Host> hosts = hostService.findAll();
+        view.displayHostTable(hosts);
+    }
+
+    private void addHost() {
+        System.out.println("Inside addHost()"); //debug
+        view.displayHeader("Add Host");
+        Host newHost = view.readHostInfo(null);
+
+        System.out.println("Validating host: " + newHost.getEmail()); //debug
+
+        boolean duplicate = hostService.findAll().stream()
+                .anyMatch(h -> h.getEmail().equalsIgnoreCase(newHost.getEmail().trim()));
+
+        List<String> errors = validateHost(newHost);
+
+        if (duplicate) {
+            errors.add("A host with this email already exists. Use different email.");
+        }
+
+        System.out.println("Errors found: " + errors.size()); // debug
+
+        if (!errors.isEmpty()) {
+            view.displayHeader("Validation Failed");
+            errors.forEach(view::displayMessage);
+            return;
+        }
+
+        boolean added = hostService.addHost(newHost);
+        System.out.println("addHost() returned: " + added); //debug line
+
+        if (added) {
+            view.displayMessage("Host added successfully.");
+        } else {
+            view.displayMessage("Failed to add host.");
+        }
+    }
+
+    private void updateHost() {
+        view.displayHeader("Update Host");
+        String id = view.readRequiredString("Host ID to update: ");
+        Host existing = hostService.findAll().stream()
+                .filter(h -> h.getId().equals(id))
+                .findFirst()
+                .orElse(null);
+
+        if (existing == null) {
+            view.displayMessage("Host not found.");
+            return;
+        }
+
+        Host updated = view.readHostInfo(existing);
+        if (hostService.updateHost(updated)) {
+            view.displayMessage("Host updated successfully.");
+        } else {
+            view.displayMessage("Update failed.");
+        }
+    }
+
+    private void deleteHost() {
+        view.displayHeader("Delete Host");
+        String id = view.readRequiredString("Host ID to delete: ");
+        if (hostService.deleteHost(id)) {
+            view.displayMessage("Host deleted successfully.");
+        } else {
+            view.displayMessage("Delete failed.");
+        }
+    }
+
+    private List<String> validateHost(Host host) {
+        List<String> errors = new ArrayList<>();
+
+        if (host.getEmail() == null || !host.getEmail().matches("^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$")) {
+            errors.add("Invalid email format.");
+        }
+
+        if (host.getCity() == null || host.getCity().isBlank()) {
+            errors.add("City is required.");
+        }
+
+        if (host.getState() == null || host.getState().isBlank()) {
+            errors.add("State is required.");
+        }
+
+        if (host.getStandardRate() == null || host.getStandardRate().compareTo(BigDecimal.ZERO) <= 0) {
+            errors.add("Standard rate must be a positive number.");
+        }
+
+        if (host.getWeekendsRate() == null || host.getWeekendsRate().compareTo(BigDecimal.ZERO) <= 0) {
+            errors.add("Weekend rate must be a positive number.");
+        }
+
+        return errors;
+    }
+
 
 }
