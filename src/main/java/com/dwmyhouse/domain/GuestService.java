@@ -38,4 +38,19 @@ public class GuestService {
         return repository.findById(id);
     }
 
+    public List<Guest> findAll() {
+        return repository.findAll();
+    }
+
+    public boolean addGuest(Guest guest) {
+        return repository.add(guest);
+    }
+
+    public boolean updateGuest(Guest guest) {
+        return repository.update(guest);
+    }
+
+    public boolean deleteGuest(String guestId) {
+        return repository.delete(guestId);
+    }
 }
