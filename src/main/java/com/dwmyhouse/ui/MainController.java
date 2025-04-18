@@ -432,11 +432,8 @@ public class MainController {
 
     private void updateHost() {
         view.displayHeader("Update Host");
-        String id = view.readRequiredString("Host ID to update: ");
-        Host existing = hostService.findAll().stream()
-                .filter(h -> h.getId().equals(id))
-                .findFirst()
-                .orElse(null);
+        String email = view.readValidEmail("Host Email to Update: ");
+        Host existing = hostService.getHostByEmail(email);
 
         if (existing == null) {
             view.displayMessage("Host not found.");
@@ -444,11 +441,31 @@ public class MainController {
         }
 
         Host updated = view.readHostInfo(existing);
-        if (hostService.updateHost(updated)) {
+
+        List<String> errors = validateHost(updated);
+
+        if (!updated.getEmail().equalsIgnoreCase(existing.getEmail())) {
+            // Ensure email is still unique
+            boolean duplicate = hostService.findAll().stream()
+                    .anyMatch(h -> h.getEmail().equalsIgnoreCase(updated.getEmail()));
+            if (duplicate) {
+                errors.add("A host with this email already exists.");
+            }
+        }
+
+        if (!errors.isEmpty()) {
+            view.displayHeader("Validation Failed");
+            errors.forEach(view::displayMessage);
+            return;
+        }
+
+        boolean result = hostService.updateHost(updated);
+        if (result) {
             view.displayMessage("Host updated successfully.");
         } else {
-            view.displayMessage("Update failed.");
+            view.displayMessage("Host update failed.");
         }
+
     }
 
     private void deleteHost() {
