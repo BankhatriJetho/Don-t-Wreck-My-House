@@ -1,5 +1,6 @@
 package com.dwmyhouse.ui;
 
+import com.dwmyhouse.models.Guest;
 import com.dwmyhouse.models.Reservation;
 import org.springframework.stereotype.Component;
 
@@ -43,6 +44,7 @@ public class View {
         System.out.println("2. Add/Make a Reservation");
         System.out.println("3. Edit a Reservation");
         System.out.println("4. Cancel a Reservation");
+        System.out.println("5. Manage a Guest");
         System.out.println();
     }
 
@@ -160,5 +162,39 @@ public class View {
     public void displayMessage(String message) {
         out.println(message);
     }
+
+    //Method for displaying guest menu
+    public void displayGuestMenu() {
+        System.out.println("\nGuest Management");
+        System.out.println("=====================");
+        System.out.println("0. Back");
+        System.out.println("1. View All Guests");
+        System.out.println("2. Add Guest");
+        System.out.println("3. Update Guest");
+        System.out.println("4. Delete Guest");
+        System.out.println();
+    }
+
+    //method for reading guest info
+    public Guest readGuestInfo(Guest existing) {
+        Guest guest = (existing != null) ? existing : new Guest();
+
+        if (existing == null) {
+            String id = readRequiredString("Guest ID: ");
+            guest.setGuestId(id);
+        } else {
+            displayMessage("Editing guest: " + existing.getGuestId());
+        }
+
+        guest.setFirstName(readRequiredString("First Name: "));
+        guest.setLastName(readRequiredString("Last Name: "));
+        guest.setEmail(readValidEmail("Email: "));
+        guest.setPhone(readRequiredString("Phone: "));
+        guest.setState(readRequiredString("State (2-letter code): "));
+
+        return guest;
+    }
+
+
 
 }
