@@ -320,7 +320,7 @@ public class MainController {
     //helper methods for guest operations
     private void viewAllGuests() {
         List<Guest> guests = guestService.findAll();
-        guests.forEach(g -> view.displayMessage(g.toString()));
+        view.displayGuestTable(guests);
     }
 
     private void addGuest() {

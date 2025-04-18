@@ -186,15 +186,47 @@ public class View {
             displayMessage("Editing guest: " + existing.getGuestId());
         }
 
-        guest.setFirstName(readRequiredString("First Name: "));
-        guest.setLastName(readRequiredString("Last Name: "));
-        guest.setEmail(readValidEmail("Email: "));
-        guest.setPhone(readRequiredString("Phone: "));
-        guest.setState(readRequiredString("State (2-letter code): "));
+        guest.setFirstName(readOptional("First Name", guest.getFirstName()));
+        guest.setLastName(readOptional("Last Name", guest.getLastName()));
+        guest.setEmail(readOptional("Email", guest.getEmail()));
+        guest.setPhone(readOptional("Phone", guest.getPhone()));
+        guest.setState(readOptional("State (2-letter code)", guest.getState()));
 
         return guest;
     }
 
+    //method for formating list of guest when displaying the guests
+    public void displayGuestTable(List<Guest> guests) {
+        if (guests == null || guests.isEmpty()) {
+            displayMessage("No guests found.");
+            return;
+        }
+
+        System.out.println("\nGUEST LIST");
+        System.out.println("=".repeat(110));
+        System.out.printf("%-8s | %-30s | %-40s | %-5s | %-15s%n",
+                "ID", "Name", "Email", "State", "Phone");
+        System.out.println("-".repeat(110));
+
+        for (Guest g : guests) {
+            System.out.printf("%-8s | %-30s | %-40s | %-5s | %-15s%n",
+                    g.getGuestId(),
+                    g.getFirstName() + " " + g.getLastName(),
+                    g.getEmail(),
+                    g.getState(),
+                    g.getPhone());
+        }
+
+        System.out.println("=".repeat(110));
+    }
+
+    //Helper method for editing guest
+    //Displays original guest value when editing guest
+    private String readOptional(String label, String defaultVal) {
+        System.out.printf("%s (%s): ", label, defaultVal);
+        String input = console.nextLine().trim();
+        return input.isEmpty() ? defaultVal : input;
+    }
 
 
 }
