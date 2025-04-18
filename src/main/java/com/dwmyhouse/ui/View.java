@@ -318,5 +318,22 @@ public class View {
         return host;
     }
 
+    //method to display host summary
+    public void displayHostSummary(Host host) {
+        displayHeader("Updated Host Summary");
+        System.out.println("ID: " + host.getId());
+        System.out.println("Name: " + host.getLastName());
+        System.out.println("Email: " + host.getEmail());
+        System.out.println("Phone: " + host.getPhone());
+        System.out.println("Address: " + host.getAddress());
+        System.out.println("City: " + host.getCity());
+        System.out.println("State: " + host.getState());
+        System.out.println("Postal Code: " + host.getPostalCode());
+        System.out.println("Standard Rate: $" + host.getStandardRate());
+        System.out.println("Weekend Rate: $" + host.getWeekendsRate());
+    }
+
+
+
 
 }

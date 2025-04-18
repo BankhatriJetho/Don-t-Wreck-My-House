@@ -462,6 +462,7 @@ public class MainController {
         boolean result = hostService.updateHost(updated);
         if (result) {
             view.displayMessage("Host updated successfully.");
+            view.displayHostSummary(updated);
         } else {
             view.displayMessage("Host update failed.");
         }
