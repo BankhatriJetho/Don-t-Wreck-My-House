@@ -3,6 +3,8 @@ package com.dwmyhouse.data;
 import com.dwmyhouse.models.Reservation;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
@@ -18,6 +20,8 @@ public class ReservationJsonRepository {
 
     public ReservationJsonRepository(@Value("${reservation.json.path:./data/reservations.json}") String filePath) {
         this.file = new File(filePath);
+        mapper.registerModule(new JavaTimeModule());
+        mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
     }
 
     public List<Reservation> findAll() {

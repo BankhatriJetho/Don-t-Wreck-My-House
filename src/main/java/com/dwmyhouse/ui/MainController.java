@@ -3,6 +3,7 @@ package com.dwmyhouse.ui;
 import com.dwmyhouse.domain.GuestService;
 import com.dwmyhouse.domain.HostService;
 import com.dwmyhouse.domain.ReservationService;
+import com.dwmyhouse.migration.DataMigrationService;
 import com.dwmyhouse.models.Guest;
 import com.dwmyhouse.models.Host;
 import com.dwmyhouse.models.Reservation;
@@ -30,12 +31,14 @@ public class MainController {
     private final GuestManager guestManager;
     private final HostManager hostManager;
     private final ReservationManager reservationManager;
+    private final DataMigrationService dataMigrationService;
 
     @Autowired
     public MainController(GuestService guestService, HostService hostService,
                           ReservationService reservationService, View view,
                           GuestManager guestManager, HostManager hostManager,
-                          ReservationManager reservationManager) {
+                          ReservationManager reservationManager,
+                          DataMigrationService dataMigrationService) {
         this.guestService = guestService;
         this.hostService = hostService;
         this.reservationService = reservationService;
@@ -43,6 +46,7 @@ public class MainController {
         this.guestManager = guestManager;
         this.hostManager = hostManager;
         this.reservationManager = reservationManager;
+        this.dataMigrationService = dataMigrationService;
     }
 
     /**
@@ -50,6 +54,10 @@ public class MainController {
      * Displays the main menu and handles user actions.
      */
     public void run() {
+        //Temp DEV COMMAND
+        //dataMigrationService.migrateAll();
+        dataMigrationService.migrateReservations();
+
         view.displayHeader("Welcome to Don't Wreck My House");
         System.out.println();
         view.displayMessage("Select from the Menu below to continue.");
