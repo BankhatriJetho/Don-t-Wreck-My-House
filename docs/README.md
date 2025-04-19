@@ -6,6 +6,9 @@ A console-based reservation system for hosts and guests, built with Java and Spr
 ````
 com.dwmyhouse
 ├── data         -> All file read/write logic (@Repository)
+│   ├── GuestJsonRepository
+│   ├── HostJsonRepository
+│   ├── ReservationJsonRepository
 │   ├── GuestRepository
 │   ├── HostRepository
 │   └── ReservationRepository
@@ -15,13 +18,19 @@ com.dwmyhouse
 │   ├── HostService
 │   └── ReservationService
 │
+├── migration
+│   ├── DataMigrationService
+│
 ├── models       -> Model classes
 │   ├── Guest
 │   ├── Host
 │   ├── Reservation
 │
 ├── ui           -> Console UI & Menu handling (@Component)
-│   ├── Controller
+│   ├── MainController
+│   ├── GuestManager
+│   ├── HostManager
+│   ├── ReservationManager
 │   └── View
 │
 ├── Main        -> Main class (launch Spring context)
@@ -32,11 +41,14 @@ com.dwmyhouse
 - Java 17
 - Spring (Core + DI Annotations)
 - Maven (Build and Dependency Management)
-- JUnit5 (Testing)
-- CSV-based File I/O
+- JUnit5 + Mockito (Testing & Mocks)
+- CSV + JSON (Switchable Persistence)
 
 ## Features
-- View Reservations for a host
+- View Reservations 
+  - for a host
+  - for a guest
+  - using filters such as zipcode, State, or City
 - Make a new reservation (with weekend/weekday rates)
 - Edit an existing reservation
 - Cancel a future reservation
@@ -48,13 +60,14 @@ com.dwmyhouse
 - Fully tested functionalities
 - Modular 3-layer architecture
 - Annotation based Spring Dependency Injection
+- CSV to JSON migration
 
 ## Testing
 - Test data located in `src/test/resources/test-data`
 - Includes:
     - Repository tests with edge cases
     - Service tests for each operation (make/add, edit, cancel)
-    - View I/O tests
+    - View I/O tests 
 
 ## Sample UI
 ````
