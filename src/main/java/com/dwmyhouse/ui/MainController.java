@@ -29,17 +29,20 @@ public class MainController {
     private final View view;
     private final GuestManager guestManager;
     private final HostManager hostManager;
+    private final ReservationManager reservationManager;
 
     @Autowired
     public MainController(GuestService guestService, HostService hostService,
                           ReservationService reservationService, View view,
-                          GuestManager guestManager, HostManager hostManager) {
+                          GuestManager guestManager, HostManager hostManager,
+                          ReservationManager reservationManager) {
         this.guestService = guestService;
         this.hostService = hostService;
         this.reservationService = reservationService;
         this.view = view;
         this.guestManager = guestManager;
         this.hostManager = hostManager;
+        this.reservationManager = reservationManager;
     }
 
     /**
@@ -53,7 +56,7 @@ public class MainController {
 
         while(true) { //Displays menu and read user selection
             view.displayMenu();
-            String input = view.readMenuSelection("Select [0 - 5]: " );
+            String input = view.readMenuSelection("Select [0 - 7]: " );
 
             switch (input) {
                 case "1":
@@ -73,6 +76,9 @@ public class MainController {
                     break;
                 case "6":
                     hostManager.manageHosts();
+                    break;
+                case "7":
+                    reservationManager.manageReservationFilters();
                     break;
                 case "0":
                     view.displayHeader("Exiting....");
@@ -297,5 +303,5 @@ public class MainController {
             view.displayMessage("Invalid input. Cancellation failed.");
         }
     }
-    
+
 }

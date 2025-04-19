@@ -49,6 +49,7 @@ public class View {
         System.out.println("4. Cancel a Reservation");
         System.out.println("5. Manage a Guest");
         System.out.println("6. Manage a Host");
+        System.out.println("7. View Reservations by Filter");
         System.out.println();
     }
 
@@ -333,7 +334,16 @@ public class View {
         System.out.println("Weekend Rate: $" + host.getWeekendsRate());
     }
 
-
+    public void displayReservationFilterMenu() {
+        System.out.println("\nReservation Filter Menu");
+        System.out.println("===============================");
+        System.out.println("0. Back");
+        System.out.println("1. View reservations by Guest Email");
+        System.out.println("2. View reservations by Host State");
+        System.out.println("3. View reservations by Host City");
+        System.out.println("4. View reservations by Host Zip Code");
+        System.out.println();
+    }
 
 
 }
