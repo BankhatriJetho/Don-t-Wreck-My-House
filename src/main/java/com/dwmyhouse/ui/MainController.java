@@ -56,7 +56,7 @@ public class MainController {
     public void run() {
         //Temp DEV COMMAND
         //dataMigrationService.migrateAll();
-        dataMigrationService.migrateReservations();
+        //dataMigrationService.migrateReservations();
 
         view.displayHeader("Welcome to Don't Wreck My House");
         System.out.println();

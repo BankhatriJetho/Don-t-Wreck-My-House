@@ -46,7 +46,7 @@ public class DataMigrationService {
         migrateReservations();
     }
 
-    private void migrateGuests() {
+    public void migrateGuests() {
         System.out.println("Migrating guests...");
         List<Guest> guests = guestRepository.findAll();
         for (Guest g : guests) {
@@ -55,7 +55,7 @@ public class DataMigrationService {
         System.out.println("Guests migrated: " + guests.size());
     }
 
-    private void migrateHosts() {
+    public void migrateHosts() {
         System.out.println("Migrating hosts...");
         List<Host> hosts = hostRepository.findAll();
         for (Host h : hosts) {
