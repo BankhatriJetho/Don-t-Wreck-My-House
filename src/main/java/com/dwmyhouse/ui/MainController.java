@@ -55,7 +55,10 @@ public class MainController {
      */
     public void run() {
         //Temp DEV COMMAND
+        //Uncomment the line below to migrate all data to JSON
         //dataMigrationService.migrateAll();
+
+        //Uncomment the line below to migrate the reservation Data only
         //dataMigrationService.migrateReservations();
 
         view.displayHeader("Welcome to Don't Wreck My House");
