@@ -1,0 +1,3 @@
+host_id,last_name,email,phone,address,city,state,postal_code,standard_rate,weekend_rate
+abc123,Doe,doe@example.com,555-1234,123 Main St,Springfield,IL,62701,100.00,150.00
+xyz789,Smith,smith@example.com,555-5678,456 Oak Ave,Tampa,FL,33602,120.00,180.00
