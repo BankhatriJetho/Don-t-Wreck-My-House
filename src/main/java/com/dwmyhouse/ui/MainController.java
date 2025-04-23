@@ -3,13 +3,16 @@ package com.dwmyhouse.ui;
 import com.dwmyhouse.domain.GuestService;
 import com.dwmyhouse.domain.HostService;
 import com.dwmyhouse.domain.ReservationService;
+import com.dwmyhouse.migration.DataMigrationService;
 import com.dwmyhouse.models.Guest;
 import com.dwmyhouse.models.Host;
 import com.dwmyhouse.models.Reservation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
@@ -25,14 +28,25 @@ public class MainController {
     private final HostService hostService;
     private final ReservationService reservationService;
     private final View view;
+    private final GuestManager guestManager;
+    private final HostManager hostManager;
+    private final ReservationManager reservationManager;
+    private final DataMigrationService dataMigrationService;
 
     @Autowired
     public MainController(GuestService guestService, HostService hostService,
-                          ReservationService reservationService, View view) {
+                          ReservationService reservationService, View view,
+                          GuestManager guestManager, HostManager hostManager,
+                          ReservationManager reservationManager,
+                          DataMigrationService dataMigrationService) {
         this.guestService = guestService;
         this.hostService = hostService;
         this.reservationService = reservationService;
         this.view = view;
+        this.guestManager = guestManager;
+        this.hostManager = hostManager;
+        this.reservationManager = reservationManager;
+        this.dataMigrationService = dataMigrationService;
     }
 
     /**
@@ -40,13 +54,20 @@ public class MainController {
      * Displays the main menu and handles user actions.
      */
     public void run() {
+        //Temp DEV COMMAND
+        //Uncomment the line below to migrate all data to JSON
+        //dataMigrationService.migrateAll();
+
+        //Uncomment the line below to migrate the reservation Data only
+        //dataMigrationService.migrateReservations();
+
         view.displayHeader("Welcome to Don't Wreck My House");
         System.out.println();
         view.displayMessage("Select from the Menu below to continue.");
 
         while(true) { //Displays menu and read user selection
             view.displayMenu();
-            String input = view.readMenuSelection("Select [0 - 4]: " );
+            String input = view.readMenuSelection("Select [0 - 7]: " );
 
             switch (input) {
                 case "1":
@@ -60,6 +81,15 @@ public class MainController {
                     break;
                 case "4":
                     cancelReservation();
+                    break;
+                case "5":
+                    guestManager.manageGuests();
+                    break;
+                case "6":
+                    hostManager.manageHosts();
+                    break;
+                case "7":
+                    reservationManager.manageReservationFilters();
                     break;
                 case "0":
                     view.displayHeader("Exiting....");
@@ -284,4 +314,5 @@ public class MainController {
             view.displayMessage("Invalid input. Cancellation failed.");
         }
     }
+
 }

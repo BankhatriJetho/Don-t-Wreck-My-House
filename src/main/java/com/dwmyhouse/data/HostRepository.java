@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -87,5 +88,52 @@ public class HostRepository {
         }
 
         return host;
+    }
+
+    public boolean add(Host host) {
+        List<Host> hosts = findAll();
+        hosts.add(host);
+        return writeAll(hosts);
+    }
+
+    public boolean update(Host updatedHost) {
+        List<Host> hosts = findAll();
+        for (int i = 0; i < hosts.size(); i++) {
+            if (hosts.get(i).getId().equals(updatedHost.getId())) {
+                hosts.set(i, updatedHost);
+                return writeAll(hosts);
+            }
+        }
+        return false;
+    }
+
+    public boolean delete(String hostId) {
+        List<Host> hosts = findAll();
+        boolean removed = hosts.removeIf(h -> h.getId().equals(hostId));
+        return removed && writeAll(hosts);
+    }
+
+    private boolean writeAll(List<Host> hosts) {
+        try (PrintWriter writer = new PrintWriter(filePath.toFile())) {
+            writer.println(HEADER);
+            for (Host h : hosts) {
+                writer.printf("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s%n",
+                        h.getId(),
+                        h.getLastName(),
+                        h.getEmail(),
+                        h.getPhone(),
+                        h.getAddress(),
+                        h.getCity(),
+                        h.getState(),
+                        h.getPostalCode(),
+                        h.getStandardRate().toPlainString(),
+                        h.getWeekendsRate().toPlainString()
+                );
+            }
+            return true;
+        } catch (Exception e) {
+            System.out.println("Error writing hosts.csv: " + e.getMessage());
+        }
+        return false;
     }
 }

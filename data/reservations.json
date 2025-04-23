@@ -1,0 +1,2346 @@
+[ {
+  "id" : 1,
+  "startDate" : "2021-07-31",
+  "endDate" : "2021-08-07",
+  "guestId" : "640",
+  "total" : 2550,
+  "hostId" : "3edda6bc-ab95-49a8-8962-d50b53f84b15"
+}, {
+  "id" : 2,
+  "startDate" : "2021-03-23",
+  "endDate" : "2021-03-26",
+  "guestId" : "35",
+  "total" : 1020,
+  "hostId" : "3edda6bc-ab95-49a8-8962-d50b53f84b15"
+}, {
+  "id" : 3,
+  "startDate" : "2021-04-23",
+  "endDate" : "2021-04-26",
+  "guestId" : "410",
+  "total" : 1190,
+  "hostId" : "3edda6bc-ab95-49a8-8962-d50b53f84b15"
+}, {
+  "id" : 4,
+  "startDate" : "2022-03-17",
+  "endDate" : "2022-03-22",
+  "guestId" : "494",
+  "total" : 1870,
+  "hostId" : "3edda6bc-ab95-49a8-8962-d50b53f84b15"
+}, {
+  "id" : 5,
+  "startDate" : "2022-01-26",
+  "endDate" : "2022-02-01",
+  "guestId" : "933",
+  "total" : 2210,
+  "hostId" : "3edda6bc-ab95-49a8-8962-d50b53f84b15"
+}, {
+  "id" : 6,
+  "startDate" : "2021-12-25",
+  "endDate" : "2021-12-30",
+  "guestId" : "554",
+  "total" : 1785,
+  "hostId" : "3edda6bc-ab95-49a8-8962-d50b53f84b15"
+}, {
+  "id" : 7,
+  "startDate" : "2021-05-02",
+  "endDate" : "2021-05-08",
+  "guestId" : "699",
+  "total" : 2125,
+  "hostId" : "3edda6bc-ab95-49a8-8962-d50b53f84b15"
+}, {
+  "id" : 8,
+  "startDate" : "2022-03-13",
+  "endDate" : "2022-03-15",
+  "guestId" : "570",
+  "total" : 680,
+  "hostId" : "3edda6bc-ab95-49a8-8962-d50b53f84b15"
+}, {
+  "id" : 9,
+  "startDate" : "2021-10-04",
+  "endDate" : "2021-10-07",
+  "guestId" : "287",
+  "total" : 1020,
+  "hostId" : "3edda6bc-ab95-49a8-8962-d50b53f84b15"
+}, {
+  "id" : 10,
+  "startDate" : "2021-12-14",
+  "endDate" : "2021-12-15",
+  "guestId" : "866",
+  "total" : 340,
+  "hostId" : "3edda6bc-ab95-49a8-8962-d50b53f84b15"
+}, {
+  "id" : 11,
+  "startDate" : "2022-01-16",
+  "endDate" : "2022-01-17",
+  "guestId" : "524",
+  "total" : 340,
+  "hostId" : "3edda6bc-ab95-49a8-8962-d50b53f84b15"
+}, {
+  "id" : 12,
+  "startDate" : "2021-10-19",
+  "endDate" : "2021-10-20",
+  "guestId" : "200",
+  "total" : 340,
+  "hostId" : "3edda6bc-ab95-49a8-8962-d50b53f84b15"
+}, {
+  "id" : 13,
+  "startDate" : "2021-11-01",
+  "endDate" : "2021-11-08",
+  "guestId" : "150",
+  "total" : 2550,
+  "hostId" : "3edda6bc-ab95-49a8-8962-d50b53f84b15"
+}, {
+  "id" : 14,
+  "startDate" : "2021-09-14",
+  "endDate" : "2021-09-21",
+  "guestId" : "930",
+  "total" : 1320,
+  "hostId" : "b6ddb844-b990-471a-8c0a-519d0777eb9b"
+}, {
+  "id" : 15,
+  "startDate" : "2021-12-04",
+  "endDate" : "2021-12-11",
+  "guestId" : "624",
+  "total" : 1320,
+  "hostId" : "b6ddb844-b990-471a-8c0a-519d0777eb9b"
+}, {
+  "id" : 16,
+  "startDate" : "2022-01-15",
+  "endDate" : "2022-01-16",
+  "guestId" : "128",
+  "total" : 220,
+  "hostId" : "b6ddb844-b990-471a-8c0a-519d0777eb9b"
+}, {
+  "id" : 17,
+  "startDate" : "2021-09-04",
+  "endDate" : "2021-09-09",
+  "guestId" : "584",
+  "total" : 924,
+  "hostId" : "b6ddb844-b990-471a-8c0a-519d0777eb9b"
+}, {
+  "id" : 18,
+  "startDate" : "2022-01-09",
+  "endDate" : "2022-01-10",
+  "guestId" : "130",
+  "total" : 176,
+  "hostId" : "b6ddb844-b990-471a-8c0a-519d0777eb9b"
+}, {
+  "id" : 19,
+  "startDate" : "2021-12-31",
+  "endDate" : "2022-01-06",
+  "guestId" : "198",
+  "total" : 1144,
+  "hostId" : "b6ddb844-b990-471a-8c0a-519d0777eb9b"
+}, {
+  "id" : 20,
+  "startDate" : "2021-05-30",
+  "endDate" : "2021-05-31",
+  "guestId" : "402",
+  "total" : 176,
+  "hostId" : "b6ddb844-b990-471a-8c0a-519d0777eb9b"
+}, {
+  "id" : 21,
+  "startDate" : "2022-02-24",
+  "endDate" : "2022-02-27",
+  "guestId" : "921",
+  "total" : 616,
+  "hostId" : "b6ddb844-b990-471a-8c0a-519d0777eb9b"
+}, {
+  "id" : 22,
+  "startDate" : "2021-12-01",
+  "endDate" : "2021-12-04",
+  "guestId" : "488",
+  "total" : 572,
+  "hostId" : "b6ddb844-b990-471a-8c0a-519d0777eb9b"
+}, {
+  "id" : 23,
+  "startDate" : "2022-03-15",
+  "endDate" : "2022-03-18",
+  "guestId" : "803",
+  "total" : 528,
+  "hostId" : "b6ddb844-b990-471a-8c0a-519d0777eb9b"
+}, {
+  "id" : 24,
+  "startDate" : "2022-02-18",
+  "endDate" : "2022-02-22",
+  "guestId" : "916",
+  "total" : 792,
+  "hostId" : "b6ddb844-b990-471a-8c0a-519d0777eb9b"
+}, {
+  "id" : 25,
+  "startDate" : "2021-12-14",
+  "endDate" : "2021-12-18",
+  "guestId" : "281",
+  "total" : 748,
+  "hostId" : "b6ddb844-b990-471a-8c0a-519d0777eb9b"
+}, {
+  "id" : 26,
+  "startDate" : "2021-12-28",
+  "endDate" : "2021-12-29",
+  "guestId" : "176",
+  "total" : 144,
+  "hostId" : "cf6cd63a-028a-4620-9786-60e1d0ce23b7"
+}, {
+  "id" : 27,
+  "startDate" : "2021-08-17",
+  "endDate" : "2021-08-19",
+  "guestId" : "133",
+  "total" : 288,
+  "hostId" : "cf6cd63a-028a-4620-9786-60e1d0ce23b7"
+}, {
+  "id" : 28,
+  "startDate" : "2021-09-06",
+  "endDate" : "2021-09-10",
+  "guestId" : "783",
+  "total" : 576,
+  "hostId" : "cf6cd63a-028a-4620-9786-60e1d0ce23b7"
+}, {
+  "id" : 29,
+  "startDate" : "2022-03-05",
+  "endDate" : "2022-03-09",
+  "guestId" : "651",
+  "total" : 612,
+  "hostId" : "cf6cd63a-028a-4620-9786-60e1d0ce23b7"
+}, {
+  "id" : 30,
+  "startDate" : "2021-03-28",
+  "endDate" : "2021-04-01",
+  "guestId" : "616",
+  "total" : 576,
+  "hostId" : "cf6cd63a-028a-4620-9786-60e1d0ce23b7"
+}, {
+  "id" : 31,
+  "startDate" : "2021-05-06",
+  "endDate" : "2021-05-07",
+  "guestId" : "941",
+  "total" : 144,
+  "hostId" : "cf6cd63a-028a-4620-9786-60e1d0ce23b7"
+}, {
+  "id" : 32,
+  "startDate" : "2021-07-26",
+  "endDate" : "2021-07-31",
+  "guestId" : "216",
+  "total" : 756,
+  "hostId" : "cf6cd63a-028a-4620-9786-60e1d0ce23b7"
+}, {
+  "id" : 33,
+  "startDate" : "2021-11-22",
+  "endDate" : "2021-11-27",
+  "guestId" : "496",
+  "total" : 756,
+  "hostId" : "cf6cd63a-028a-4620-9786-60e1d0ce23b7"
+}, {
+  "id" : 34,
+  "startDate" : "2021-12-03",
+  "endDate" : "2021-12-07",
+  "guestId" : "903",
+  "total" : 648,
+  "hostId" : "cf6cd63a-028a-4620-9786-60e1d0ce23b7"
+}, {
+  "id" : 35,
+  "startDate" : "2022-03-04",
+  "endDate" : "2022-03-05",
+  "guestId" : "584",
+  "total" : 180,
+  "hostId" : "cf6cd63a-028a-4620-9786-60e1d0ce23b7"
+}, {
+  "id" : 36,
+  "startDate" : "2021-10-22",
+  "endDate" : "2021-10-24",
+  "guestId" : "887",
+  "total" : 360,
+  "hostId" : "cf6cd63a-028a-4620-9786-60e1d0ce23b7"
+}, {
+  "id" : 37,
+  "startDate" : "2022-03-09",
+  "endDate" : "2022-03-16",
+  "guestId" : "409",
+  "total" : 1080,
+  "hostId" : "cf6cd63a-028a-4620-9786-60e1d0ce23b7"
+}, {
+  "id" : 38,
+  "startDate" : "2021-09-14",
+  "endDate" : "2021-09-19",
+  "guestId" : "314",
+  "total" : 792,
+  "hostId" : "cf6cd63a-028a-4620-9786-60e1d0ce23b7"
+}, {
+  "id" : 39,
+  "startDate" : "2022-02-22",
+  "endDate" : "2022-02-26",
+  "guestId" : "623",
+  "total" : 612,
+  "hostId" : "cf6cd63a-028a-4620-9786-60e1d0ce23b7"
+}, {
+  "id" : 40,
+  "startDate" : "2021-10-18",
+  "endDate" : "2021-10-21",
+  "guestId" : "670",
+  "total" : 432,
+  "hostId" : "cf6cd63a-028a-4620-9786-60e1d0ce23b7"
+}, {
+  "id" : 41,
+  "startDate" : "2021-04-28",
+  "endDate" : "2021-05-05",
+  "guestId" : "773",
+  "total" : 1080,
+  "hostId" : "cf6cd63a-028a-4620-9786-60e1d0ce23b7"
+}, {
+  "id" : 42,
+  "startDate" : "2021-08-23",
+  "endDate" : "2021-08-24",
+  "guestId" : "697",
+  "total" : 144,
+  "hostId" : "cf6cd63a-028a-4620-9786-60e1d0ce23b7"
+}, {
+  "id" : 43,
+  "startDate" : "2021-11-06",
+  "endDate" : "2021-11-10",
+  "guestId" : "439",
+  "total" : 612,
+  "hostId" : "cf6cd63a-028a-4620-9786-60e1d0ce23b7"
+}, {
+  "id" : 44,
+  "startDate" : "2021-04-06",
+  "endDate" : "2021-04-11",
+  "guestId" : "41",
+  "total" : 792,
+  "hostId" : "cf6cd63a-028a-4620-9786-60e1d0ce23b7"
+}, {
+  "id" : 45,
+  "startDate" : "2021-07-01",
+  "endDate" : "2021-07-04",
+  "guestId" : "136",
+  "total" : 504,
+  "hostId" : "cf6cd63a-028a-4620-9786-60e1d0ce23b7"
+}, {
+  "id" : 46,
+  "startDate" : "2022-03-16",
+  "endDate" : "2022-03-17",
+  "guestId" : "852",
+  "total" : 374,
+  "hostId" : "4e52e660-3112-4d4f-9089-827819afa5de"
+}, {
+  "id" : 47,
+  "startDate" : "2021-07-12",
+  "endDate" : "2021-07-17",
+  "guestId" : "211",
+  "total" : 1963.5,
+  "hostId" : "4e52e660-3112-4d4f-9089-827819afa5de"
+}, {
+  "id" : 48,
+  "startDate" : "2022-01-05",
+  "endDate" : "2022-01-12",
+  "guestId" : "570",
+  "total" : 2805.0,
+  "hostId" : "4e52e660-3112-4d4f-9089-827819afa5de"
+}, {
+  "id" : 49,
+  "startDate" : "2021-10-29",
+  "endDate" : "2021-10-31",
+  "guestId" : "423",
+  "total" : 935.0,
+  "hostId" : "4e52e660-3112-4d4f-9089-827819afa5de"
+}, {
+  "id" : 50,
+  "startDate" : "2021-12-01",
+  "endDate" : "2021-12-08",
+  "guestId" : "974",
+  "total" : 2805.0,
+  "hostId" : "4e52e660-3112-4d4f-9089-827819afa5de"
+}, {
+  "id" : 51,
+  "startDate" : "2021-12-25",
+  "endDate" : "2021-12-31",
+  "guestId" : "845",
+  "total" : 2337.5,
+  "hostId" : "4e52e660-3112-4d4f-9089-827819afa5de"
+}, {
+  "id" : 52,
+  "startDate" : "2022-03-02",
+  "endDate" : "2022-03-08",
+  "guestId" : "615",
+  "total" : 2431.0,
+  "hostId" : "4e52e660-3112-4d4f-9089-827819afa5de"
+}, {
+  "id" : 53,
+  "startDate" : "2021-06-14",
+  "endDate" : "2021-06-18",
+  "guestId" : "587",
+  "total" : 1496,
+  "hostId" : "4e52e660-3112-4d4f-9089-827819afa5de"
+}, {
+  "id" : 54,
+  "startDate" : "2021-04-03",
+  "endDate" : "2021-04-07",
+  "guestId" : "609",
+  "total" : 1589.5,
+  "hostId" : "4e52e660-3112-4d4f-9089-827819afa5de"
+}, {
+  "id" : 55,
+  "startDate" : "2022-02-19",
+  "endDate" : "2022-02-23",
+  "guestId" : "399",
+  "total" : 501.5,
+  "hostId" : "4c7f5ee4-a822-46c4-95d4-8dba7635922c"
+}, {
+  "id" : 56,
+  "startDate" : "2021-06-04",
+  "endDate" : "2021-06-11",
+  "guestId" : "946",
+  "total" : 885.0,
+  "hostId" : "4c7f5ee4-a822-46c4-95d4-8dba7635922c"
+}, {
+  "id" : 57,
+  "startDate" : "2021-07-11",
+  "endDate" : "2021-07-17",
+  "guestId" : "113",
+  "total" : 737.5,
+  "hostId" : "4c7f5ee4-a822-46c4-95d4-8dba7635922c"
+}, {
+  "id" : 58,
+  "startDate" : "2021-12-21",
+  "endDate" : "2021-12-26",
+  "guestId" : "636",
+  "total" : 649.0,
+  "hostId" : "4c7f5ee4-a822-46c4-95d4-8dba7635922c"
+}, {
+  "id" : 59,
+  "startDate" : "2021-11-19",
+  "endDate" : "2021-11-20",
+  "guestId" : "164",
+  "total" : 147.5,
+  "hostId" : "4c7f5ee4-a822-46c4-95d4-8dba7635922c"
+}, {
+  "id" : 60,
+  "startDate" : "2021-08-28",
+  "endDate" : "2021-09-01",
+  "guestId" : "617",
+  "total" : 501.5,
+  "hostId" : "4c7f5ee4-a822-46c4-95d4-8dba7635922c"
+}, {
+  "id" : 61,
+  "startDate" : "2021-05-10",
+  "endDate" : "2021-05-13",
+  "guestId" : "591",
+  "total" : 354,
+  "hostId" : "4c7f5ee4-a822-46c4-95d4-8dba7635922c"
+}, {
+  "id" : 62,
+  "startDate" : "2021-04-15",
+  "endDate" : "2021-04-19",
+  "guestId" : "953",
+  "total" : 531.0,
+  "hostId" : "4c7f5ee4-a822-46c4-95d4-8dba7635922c"
+}, {
+  "id" : 63,
+  "startDate" : "2021-11-23",
+  "endDate" : "2021-11-29",
+  "guestId" : "468",
+  "total" : 767.0,
+  "hostId" : "4c7f5ee4-a822-46c4-95d4-8dba7635922c"
+}, {
+  "id" : 64,
+  "startDate" : "2021-10-23",
+  "endDate" : "2021-10-28",
+  "guestId" : "202",
+  "total" : 619.5,
+  "hostId" : "4c7f5ee4-a822-46c4-95d4-8dba7635922c"
+}, {
+  "id" : 65,
+  "startDate" : "2021-12-12",
+  "endDate" : "2021-12-16",
+  "guestId" : "91",
+  "total" : 1468,
+  "hostId" : "b5ed3d2d-4e7b-4509-964b-18ac4cce7493"
+}, {
+  "id" : 66,
+  "startDate" : "2021-05-13",
+  "endDate" : "2021-05-19",
+  "guestId" : "956",
+  "total" : 2385.50,
+  "hostId" : "b5ed3d2d-4e7b-4509-964b-18ac4cce7493"
+}, {
+  "id" : 67,
+  "startDate" : "2021-12-26",
+  "endDate" : "2022-01-01",
+  "guestId" : "292",
+  "total" : 2293.75,
+  "hostId" : "b5ed3d2d-4e7b-4509-964b-18ac4cce7493"
+}, {
+  "id" : 68,
+  "startDate" : "2021-04-02",
+  "endDate" : "2021-04-08",
+  "guestId" : "626",
+  "total" : 2385.50,
+  "hostId" : "b5ed3d2d-4e7b-4509-964b-18ac4cce7493"
+}, {
+  "id" : 69,
+  "startDate" : "2021-11-09",
+  "endDate" : "2021-11-16",
+  "guestId" : "876",
+  "total" : 2752.50,
+  "hostId" : "b5ed3d2d-4e7b-4509-964b-18ac4cce7493"
+}, {
+  "id" : 70,
+  "startDate" : "2021-09-20",
+  "endDate" : "2021-09-24",
+  "guestId" : "412",
+  "total" : 1468,
+  "hostId" : "b5ed3d2d-4e7b-4509-964b-18ac4cce7493"
+}, {
+  "id" : 71,
+  "startDate" : "2021-09-06",
+  "endDate" : "2021-09-08",
+  "guestId" : "934",
+  "total" : 734,
+  "hostId" : "b5ed3d2d-4e7b-4509-964b-18ac4cce7493"
+}, {
+  "id" : 72,
+  "startDate" : "2021-04-11",
+  "endDate" : "2021-04-15",
+  "guestId" : "743",
+  "total" : 1468,
+  "hostId" : "b5ed3d2d-4e7b-4509-964b-18ac4cce7493"
+}, {
+  "id" : 73,
+  "startDate" : "2021-06-02",
+  "endDate" : "2021-06-07",
+  "guestId" : "941",
+  "total" : 2018.50,
+  "hostId" : "b5ed3d2d-4e7b-4509-964b-18ac4cce7493"
+}, {
+  "id" : 74,
+  "startDate" : "2021-09-03",
+  "endDate" : "2021-09-06",
+  "guestId" : "975",
+  "total" : 1284.50,
+  "hostId" : "b5ed3d2d-4e7b-4509-964b-18ac4cce7493"
+}, {
+  "id" : 75,
+  "startDate" : "2021-10-16",
+  "endDate" : "2021-10-17",
+  "guestId" : "395",
+  "total" : 190,
+  "hostId" : "dbe836ef-358b-40b0-a7bd-b40027764d7e"
+}, {
+  "id" : 76,
+  "startDate" : "2021-10-27",
+  "endDate" : "2021-11-01",
+  "guestId" : "531",
+  "total" : 836,
+  "hostId" : "dbe836ef-358b-40b0-a7bd-b40027764d7e"
+}, {
+  "id" : 77,
+  "startDate" : "2021-12-06",
+  "endDate" : "2021-12-07",
+  "guestId" : "692",
+  "total" : 152,
+  "hostId" : "dbe836ef-358b-40b0-a7bd-b40027764d7e"
+}, {
+  "id" : 78,
+  "startDate" : "2021-09-08",
+  "endDate" : "2021-09-10",
+  "guestId" : "606",
+  "total" : 304,
+  "hostId" : "dbe836ef-358b-40b0-a7bd-b40027764d7e"
+}, {
+  "id" : 79,
+  "startDate" : "2022-01-07",
+  "endDate" : "2022-01-09",
+  "guestId" : "463",
+  "total" : 380,
+  "hostId" : "dbe836ef-358b-40b0-a7bd-b40027764d7e"
+}, {
+  "id" : 80,
+  "startDate" : "2022-02-20",
+  "endDate" : "2022-02-25",
+  "guestId" : "485",
+  "total" : 760,
+  "hostId" : "dbe836ef-358b-40b0-a7bd-b40027764d7e"
+}, {
+  "id" : 81,
+  "startDate" : "2021-05-08",
+  "endDate" : "2021-05-15",
+  "guestId" : "604",
+  "total" : 1140,
+  "hostId" : "dbe836ef-358b-40b0-a7bd-b40027764d7e"
+}, {
+  "id" : 82,
+  "startDate" : "2021-07-25",
+  "endDate" : "2021-07-29",
+  "guestId" : "191",
+  "total" : 608,
+  "hostId" : "dbe836ef-358b-40b0-a7bd-b40027764d7e"
+}, {
+  "id" : 83,
+  "startDate" : "2022-01-19",
+  "endDate" : "2022-01-21",
+  "guestId" : "474",
+  "total" : 304,
+  "hostId" : "dbe836ef-358b-40b0-a7bd-b40027764d7e"
+}, {
+  "id" : 84,
+  "startDate" : "2021-08-09",
+  "endDate" : "2021-08-10",
+  "guestId" : "549",
+  "total" : 152,
+  "hostId" : "dbe836ef-358b-40b0-a7bd-b40027764d7e"
+}, {
+  "id" : 85,
+  "startDate" : "2022-02-11",
+  "endDate" : "2022-02-13",
+  "guestId" : "845",
+  "total" : 1022.50,
+  "hostId" : "293508da-e367-437a-9178-1ebaa7d83015"
+}, {
+  "id" : 86,
+  "startDate" : "2021-11-18",
+  "endDate" : "2021-11-22",
+  "guestId" : "89",
+  "total" : 1840.50,
+  "hostId" : "293508da-e367-437a-9178-1ebaa7d83015"
+}, {
+  "id" : 87,
+  "startDate" : "2022-01-08",
+  "endDate" : "2022-01-13",
+  "guestId" : "839",
+  "total" : 2147.25,
+  "hostId" : "293508da-e367-437a-9178-1ebaa7d83015"
+}, {
+  "id" : 88,
+  "startDate" : "2021-03-27",
+  "endDate" : "2021-03-30",
+  "guestId" : "72",
+  "total" : 1329.25,
+  "hostId" : "293508da-e367-437a-9178-1ebaa7d83015"
+}, {
+  "id" : 89,
+  "startDate" : "2021-05-30",
+  "endDate" : "2021-06-04",
+  "guestId" : "990",
+  "total" : 2045,
+  "hostId" : "293508da-e367-437a-9178-1ebaa7d83015"
+}, {
+  "id" : 90,
+  "startDate" : "2021-05-12",
+  "endDate" : "2021-05-16",
+  "guestId" : "637",
+  "total" : 1840.50,
+  "hostId" : "293508da-e367-437a-9178-1ebaa7d83015"
+}, {
+  "id" : 91,
+  "startDate" : "2022-02-16",
+  "endDate" : "2022-02-21",
+  "guestId" : "390",
+  "total" : 2249.50,
+  "hostId" : "293508da-e367-437a-9178-1ebaa7d83015"
+}, {
+  "id" : 92,
+  "startDate" : "2021-08-15",
+  "endDate" : "2021-08-17",
+  "guestId" : "231",
+  "total" : 818,
+  "hostId" : "293508da-e367-437a-9178-1ebaa7d83015"
+}, {
+  "id" : 93,
+  "startDate" : "2021-12-08",
+  "endDate" : "2021-12-12",
+  "guestId" : "436",
+  "total" : 1840.50,
+  "hostId" : "293508da-e367-437a-9178-1ebaa7d83015"
+}, {
+  "id" : 94,
+  "startDate" : "2021-04-02",
+  "endDate" : "2021-04-03",
+  "guestId" : "246",
+  "total" : 511.25,
+  "hostId" : "293508da-e367-437a-9178-1ebaa7d83015"
+}, {
+  "id" : 95,
+  "startDate" : "2021-05-17",
+  "endDate" : "2021-05-21",
+  "guestId" : "88",
+  "total" : 1636,
+  "hostId" : "293508da-e367-437a-9178-1ebaa7d83015"
+}, {
+  "id" : 96,
+  "startDate" : "2021-11-05",
+  "endDate" : "2021-11-09",
+  "guestId" : "843",
+  "total" : 1840.50,
+  "hostId" : "293508da-e367-437a-9178-1ebaa7d83015"
+}, {
+  "id" : 97,
+  "startDate" : "2021-12-16",
+  "endDate" : "2021-12-20",
+  "guestId" : "208",
+  "total" : 1840.50,
+  "hostId" : "293508da-e367-437a-9178-1ebaa7d83015"
+}, {
+  "id" : 98,
+  "startDate" : "2022-01-17",
+  "endDate" : "2022-01-20",
+  "guestId" : "946",
+  "total" : 597,
+  "hostId" : "9cc47e36-6623-4fd5-af83-3f7c1475d9b8"
+}, {
+  "id" : 99,
+  "startDate" : "2021-06-22",
+  "endDate" : "2021-06-29",
+  "guestId" : "346",
+  "total" : 1492.50,
+  "hostId" : "9cc47e36-6623-4fd5-af83-3f7c1475d9b8"
+}, {
+  "id" : 100,
+  "startDate" : "2022-03-16",
+  "endDate" : "2022-03-17",
+  "guestId" : "842",
+  "total" : 199,
+  "hostId" : "9cc47e36-6623-4fd5-af83-3f7c1475d9b8"
+}, {
+  "id" : 101,
+  "startDate" : "2021-10-08",
+  "endDate" : "2021-10-14",
+  "guestId" : "762",
+  "total" : 1293.50,
+  "hostId" : "9cc47e36-6623-4fd5-af83-3f7c1475d9b8"
+}, {
+  "id" : 102,
+  "startDate" : "2022-02-17",
+  "endDate" : "2022-02-18",
+  "guestId" : "816",
+  "total" : 199,
+  "hostId" : "9cc47e36-6623-4fd5-af83-3f7c1475d9b8"
+}, {
+  "id" : 103,
+  "startDate" : "2022-01-20",
+  "endDate" : "2022-01-22",
+  "guestId" : "850",
+  "total" : 447.75,
+  "hostId" : "9cc47e36-6623-4fd5-af83-3f7c1475d9b8"
+}, {
+  "id" : 104,
+  "startDate" : "2021-10-30",
+  "endDate" : "2021-11-05",
+  "guestId" : "99",
+  "total" : 1243.75,
+  "hostId" : "9cc47e36-6623-4fd5-af83-3f7c1475d9b8"
+}, {
+  "id" : 105,
+  "startDate" : "2021-11-22",
+  "endDate" : "2021-11-28",
+  "guestId" : "708",
+  "total" : 1293.50,
+  "hostId" : "9cc47e36-6623-4fd5-af83-3f7c1475d9b8"
+}, {
+  "id" : 106,
+  "startDate" : "2021-06-15",
+  "endDate" : "2021-06-21",
+  "guestId" : "549",
+  "total" : 1293.50,
+  "hostId" : "9cc47e36-6623-4fd5-af83-3f7c1475d9b8"
+}, {
+  "id" : 107,
+  "startDate" : "2021-05-27",
+  "endDate" : "2021-05-29",
+  "guestId" : "93",
+  "total" : 447.75,
+  "hostId" : "9cc47e36-6623-4fd5-af83-3f7c1475d9b8"
+}, {
+  "id" : 108,
+  "startDate" : "2021-11-29",
+  "endDate" : "2021-12-06",
+  "guestId" : "376",
+  "total" : 1492.50,
+  "hostId" : "9cc47e36-6623-4fd5-af83-3f7c1475d9b8"
+}, {
+  "id" : 109,
+  "startDate" : "2022-03-18",
+  "endDate" : "2022-03-19",
+  "guestId" : "555",
+  "total" : 248.75,
+  "hostId" : "9cc47e36-6623-4fd5-af83-3f7c1475d9b8"
+}, {
+  "id" : 110,
+  "startDate" : "2021-12-30",
+  "endDate" : "2022-01-01",
+  "guestId" : "653",
+  "total" : 447.75,
+  "hostId" : "9cc47e36-6623-4fd5-af83-3f7c1475d9b8"
+}, {
+  "id" : 111,
+  "startDate" : "2021-05-01",
+  "endDate" : "2021-05-05",
+  "guestId" : "1",
+  "total" : 845.75,
+  "hostId" : "9cc47e36-6623-4fd5-af83-3f7c1475d9b8"
+}, {
+  "id" : 112,
+  "startDate" : "2021-09-24",
+  "endDate" : "2021-09-25",
+  "guestId" : "804",
+  "total" : 248.75,
+  "hostId" : "9cc47e36-6623-4fd5-af83-3f7c1475d9b8"
+}, {
+  "id" : 113,
+  "startDate" : "2021-03-29",
+  "endDate" : "2021-03-30",
+  "guestId" : "961",
+  "total" : 476,
+  "hostId" : "f4d6c5e4-d207-4ce0-93b3-f1d1b397883c"
+}, {
+  "id" : 114,
+  "startDate" : "2021-04-07",
+  "endDate" : "2021-04-10",
+  "guestId" : "956",
+  "total" : 1547,
+  "hostId" : "f4d6c5e4-d207-4ce0-93b3-f1d1b397883c"
+}, {
+  "id" : 115,
+  "startDate" : "2021-12-12",
+  "endDate" : "2021-12-13",
+  "guestId" : "361",
+  "total" : 476,
+  "hostId" : "f4d6c5e4-d207-4ce0-93b3-f1d1b397883c"
+}, {
+  "id" : 116,
+  "startDate" : "2021-04-13",
+  "endDate" : "2021-04-16",
+  "guestId" : "308",
+  "total" : 1428,
+  "hostId" : "f4d6c5e4-d207-4ce0-93b3-f1d1b397883c"
+}, {
+  "id" : 117,
+  "startDate" : "2021-09-17",
+  "endDate" : "2021-09-20",
+  "guestId" : "764",
+  "total" : 1666,
+  "hostId" : "f4d6c5e4-d207-4ce0-93b3-f1d1b397883c"
+}, {
+  "id" : 118,
+  "startDate" : "2021-11-11",
+  "endDate" : "2021-11-15",
+  "guestId" : "254",
+  "total" : 2142,
+  "hostId" : "f4d6c5e4-d207-4ce0-93b3-f1d1b397883c"
+}, {
+  "id" : 119,
+  "startDate" : "2021-08-06",
+  "endDate" : "2021-08-13",
+  "guestId" : "522",
+  "total" : 3570,
+  "hostId" : "f4d6c5e4-d207-4ce0-93b3-f1d1b397883c"
+}, {
+  "id" : 120,
+  "startDate" : "2021-12-19",
+  "endDate" : "2021-12-24",
+  "guestId" : "517",
+  "total" : 2380,
+  "hostId" : "f4d6c5e4-d207-4ce0-93b3-f1d1b397883c"
+}, {
+  "id" : 121,
+  "startDate" : "2021-03-30",
+  "endDate" : "2021-04-04",
+  "guestId" : "302",
+  "total" : 2618,
+  "hostId" : "f4d6c5e4-d207-4ce0-93b3-f1d1b397883c"
+}, {
+  "id" : 122,
+  "startDate" : "2022-02-20",
+  "endDate" : "2022-02-27",
+  "guestId" : "152",
+  "total" : 3570,
+  "hostId" : "f4d6c5e4-d207-4ce0-93b3-f1d1b397883c"
+}, {
+  "id" : 123,
+  "startDate" : "2021-07-06",
+  "endDate" : "2021-07-13",
+  "guestId" : "582",
+  "total" : 3570,
+  "hostId" : "f4d6c5e4-d207-4ce0-93b3-f1d1b397883c"
+}, {
+  "id" : 124,
+  "startDate" : "2022-01-12",
+  "endDate" : "2022-01-18",
+  "guestId" : "717",
+  "total" : 3094,
+  "hostId" : "f4d6c5e4-d207-4ce0-93b3-f1d1b397883c"
+}, {
+  "id" : 125,
+  "startDate" : "2022-03-15",
+  "endDate" : "2022-03-19",
+  "guestId" : "908",
+  "total" : 2023,
+  "hostId" : "f4d6c5e4-d207-4ce0-93b3-f1d1b397883c"
+}, {
+  "id" : 126,
+  "startDate" : "2022-02-11",
+  "endDate" : "2022-02-16",
+  "guestId" : "462",
+  "total" : 2618,
+  "hostId" : "f4d6c5e4-d207-4ce0-93b3-f1d1b397883c"
+}, {
+  "id" : 127,
+  "startDate" : "2021-03-25",
+  "endDate" : "2021-03-27",
+  "guestId" : "386",
+  "total" : 1071,
+  "hostId" : "f4d6c5e4-d207-4ce0-93b3-f1d1b397883c"
+}, {
+  "id" : 128,
+  "startDate" : "2021-06-15",
+  "endDate" : "2021-06-19",
+  "guestId" : "123",
+  "total" : 2023,
+  "hostId" : "f4d6c5e4-d207-4ce0-93b3-f1d1b397883c"
+}, {
+  "id" : 129,
+  "startDate" : "2021-05-01",
+  "endDate" : "2021-05-05",
+  "guestId" : "572",
+  "total" : 2023,
+  "hostId" : "f4d6c5e4-d207-4ce0-93b3-f1d1b397883c"
+}, {
+  "id" : 130,
+  "startDate" : "2022-03-05",
+  "endDate" : "2022-03-07",
+  "guestId" : "871",
+  "total" : 387,
+  "hostId" : "3f413626-e129-4d06-b68c-36450822213f"
+}, {
+  "id" : 131,
+  "startDate" : "2021-11-04",
+  "endDate" : "2021-11-07",
+  "guestId" : "937",
+  "total" : 602,
+  "hostId" : "3f413626-e129-4d06-b68c-36450822213f"
+}, {
+  "id" : 132,
+  "startDate" : "2021-09-18",
+  "endDate" : "2021-09-22",
+  "guestId" : "252",
+  "total" : 731,
+  "hostId" : "3f413626-e129-4d06-b68c-36450822213f"
+}, {
+  "id" : 133,
+  "startDate" : "2021-10-20",
+  "endDate" : "2021-10-27",
+  "guestId" : "177",
+  "total" : 1290,
+  "hostId" : "3f413626-e129-4d06-b68c-36450822213f"
+}, {
+  "id" : 134,
+  "startDate" : "2021-07-07",
+  "endDate" : "2021-07-10",
+  "guestId" : "220",
+  "total" : 559,
+  "hostId" : "3f413626-e129-4d06-b68c-36450822213f"
+}, {
+  "id" : 135,
+  "startDate" : "2022-01-23",
+  "endDate" : "2022-01-27",
+  "guestId" : "269",
+  "total" : 688,
+  "hostId" : "3f413626-e129-4d06-b68c-36450822213f"
+}, {
+  "id" : 136,
+  "startDate" : "2022-02-17",
+  "endDate" : "2022-02-18",
+  "guestId" : "175",
+  "total" : 172,
+  "hostId" : "3f413626-e129-4d06-b68c-36450822213f"
+}, {
+  "id" : 137,
+  "startDate" : "2021-12-07",
+  "endDate" : "2021-12-08",
+  "guestId" : "552",
+  "total" : 172,
+  "hostId" : "3f413626-e129-4d06-b68c-36450822213f"
+}, {
+  "id" : 138,
+  "startDate" : "2021-06-03",
+  "endDate" : "2021-06-05",
+  "guestId" : "134",
+  "total" : 387,
+  "hostId" : "3f413626-e129-4d06-b68c-36450822213f"
+}, {
+  "id" : 139,
+  "startDate" : "2021-11-28",
+  "endDate" : "2021-12-04",
+  "guestId" : "552",
+  "total" : 1075,
+  "hostId" : "3f413626-e129-4d06-b68c-36450822213f"
+}, {
+  "id" : 140,
+  "startDate" : "2021-11-19",
+  "endDate" : "2021-11-26",
+  "guestId" : "552",
+  "total" : 1290,
+  "hostId" : "3f413626-e129-4d06-b68c-36450822213f"
+}, {
+  "id" : 141,
+  "startDate" : "2021-06-13",
+  "endDate" : "2021-06-17",
+  "guestId" : "363",
+  "total" : 688,
+  "hostId" : "3f413626-e129-4d06-b68c-36450822213f"
+}, {
+  "id" : 142,
+  "startDate" : "2022-02-21",
+  "endDate" : "2022-02-24",
+  "guestId" : "911",
+  "total" : 516,
+  "hostId" : "3f413626-e129-4d06-b68c-36450822213f"
+}, {
+  "id" : 143,
+  "startDate" : "2021-04-15",
+  "endDate" : "2021-04-19",
+  "guestId" : "272",
+  "total" : 1273.50,
+  "hostId" : "d9fe6bb5-203a-4817-9de0-486e825270e8"
+}, {
+  "id" : 144,
+  "startDate" : "2021-03-29",
+  "endDate" : "2021-04-03",
+  "guestId" : "926",
+  "total" : 1485.75,
+  "hostId" : "d9fe6bb5-203a-4817-9de0-486e825270e8"
+}, {
+  "id" : 145,
+  "startDate" : "2021-06-23",
+  "endDate" : "2021-06-27",
+  "guestId" : "156",
+  "total" : 1273.50,
+  "hostId" : "d9fe6bb5-203a-4817-9de0-486e825270e8"
+}, {
+  "id" : 146,
+  "startDate" : "2021-07-05",
+  "endDate" : "2021-07-12",
+  "guestId" : "845",
+  "total" : 2122.50,
+  "hostId" : "d9fe6bb5-203a-4817-9de0-486e825270e8"
+}, {
+  "id" : 147,
+  "startDate" : "2021-08-28",
+  "endDate" : "2021-09-01",
+  "guestId" : "602",
+  "total" : 1202.75,
+  "hostId" : "d9fe6bb5-203a-4817-9de0-486e825270e8"
+}, {
+  "id" : 148,
+  "startDate" : "2021-09-30",
+  "endDate" : "2021-10-06",
+  "guestId" : "399",
+  "total" : 1839.50,
+  "hostId" : "d9fe6bb5-203a-4817-9de0-486e825270e8"
+}, {
+  "id" : 149,
+  "startDate" : "2021-09-07",
+  "endDate" : "2021-09-13",
+  "guestId" : "23",
+  "total" : 1839.50,
+  "hostId" : "d9fe6bb5-203a-4817-9de0-486e825270e8"
+}, {
+  "id" : 150,
+  "startDate" : "2022-01-15",
+  "endDate" : "2022-01-20",
+  "guestId" : "450",
+  "total" : 1485.75,
+  "hostId" : "d9fe6bb5-203a-4817-9de0-486e825270e8"
+}, {
+  "id" : 151,
+  "startDate" : "2021-10-06",
+  "endDate" : "2021-10-13",
+  "guestId" : "410",
+  "total" : 2122.50,
+  "hostId" : "d9fe6bb5-203a-4817-9de0-486e825270e8"
+}, {
+  "id" : 152,
+  "startDate" : "2022-01-09",
+  "endDate" : "2022-01-15",
+  "guestId" : "782",
+  "total" : 1768.75,
+  "hostId" : "d9fe6bb5-203a-4817-9de0-486e825270e8"
+}, {
+  "id" : 153,
+  "startDate" : "2021-10-27",
+  "endDate" : "2021-10-31",
+  "guestId" : "478",
+  "total" : 1273.50,
+  "hostId" : "d9fe6bb5-203a-4817-9de0-486e825270e8"
+}, {
+  "id" : 154,
+  "startDate" : "2022-03-02",
+  "endDate" : "2022-03-06",
+  "guestId" : "559",
+  "total" : 1273.50,
+  "hostId" : "d9fe6bb5-203a-4817-9de0-486e825270e8"
+}, {
+  "id" : 155,
+  "startDate" : "2022-02-10",
+  "endDate" : "2022-02-13",
+  "guestId" : "451",
+  "total" : 990.50,
+  "hostId" : "d9fe6bb5-203a-4817-9de0-486e825270e8"
+}, {
+  "id" : 156,
+  "startDate" : "2021-06-08",
+  "endDate" : "2021-06-13",
+  "guestId" : "927",
+  "total" : 1556.50,
+  "hostId" : "d9fe6bb5-203a-4817-9de0-486e825270e8"
+}, {
+  "id" : 157,
+  "startDate" : "2021-04-04",
+  "endDate" : "2021-04-05",
+  "guestId" : "310",
+  "total" : 283,
+  "hostId" : "d9fe6bb5-203a-4817-9de0-486e825270e8"
+}, {
+  "id" : 158,
+  "startDate" : "2021-11-11",
+  "endDate" : "2021-11-12",
+  "guestId" : "853",
+  "total" : 283,
+  "hostId" : "d9fe6bb5-203a-4817-9de0-486e825270e8"
+}, {
+  "id" : 159,
+  "startDate" : "2021-08-12",
+  "endDate" : "2021-08-13",
+  "guestId" : "196",
+  "total" : 283,
+  "hostId" : "d9fe6bb5-203a-4817-9de0-486e825270e8"
+}, {
+  "id" : 160,
+  "startDate" : "2021-11-25",
+  "endDate" : "2021-12-02",
+  "guestId" : "899",
+  "total" : 1440,
+  "hostId" : "582de161-b2eb-4ea6-8f28-b2e4be5f5ca0"
+}, {
+  "id" : 161,
+  "startDate" : "2021-07-07",
+  "endDate" : "2021-07-11",
+  "guestId" : "929",
+  "total" : 864,
+  "hostId" : "582de161-b2eb-4ea6-8f28-b2e4be5f5ca0"
+}, {
+  "id" : 162,
+  "startDate" : "2021-11-19",
+  "endDate" : "2021-11-21",
+  "guestId" : "293",
+  "total" : 480,
+  "hostId" : "582de161-b2eb-4ea6-8f28-b2e4be5f5ca0"
+}, {
+  "id" : 163,
+  "startDate" : "2021-08-28",
+  "endDate" : "2021-09-02",
+  "guestId" : "145",
+  "total" : 1008,
+  "hostId" : "582de161-b2eb-4ea6-8f28-b2e4be5f5ca0"
+}, {
+  "id" : 164,
+  "startDate" : "2022-01-15",
+  "endDate" : "2022-01-16",
+  "guestId" : "97",
+  "total" : 240,
+  "hostId" : "582de161-b2eb-4ea6-8f28-b2e4be5f5ca0"
+}, {
+  "id" : 165,
+  "startDate" : "2021-10-09",
+  "endDate" : "2021-10-15",
+  "guestId" : "980",
+  "total" : 1200,
+  "hostId" : "582de161-b2eb-4ea6-8f28-b2e4be5f5ca0"
+}, {
+  "id" : 166,
+  "startDate" : "2021-06-24",
+  "endDate" : "2021-06-29",
+  "guestId" : "569",
+  "total" : 1056,
+  "hostId" : "582de161-b2eb-4ea6-8f28-b2e4be5f5ca0"
+}, {
+  "id" : 167,
+  "startDate" : "2021-09-17",
+  "endDate" : "2021-09-19",
+  "guestId" : "149",
+  "total" : 480,
+  "hostId" : "582de161-b2eb-4ea6-8f28-b2e4be5f5ca0"
+}, {
+  "id" : 168,
+  "startDate" : "2022-01-29",
+  "endDate" : "2022-01-31",
+  "guestId" : "22",
+  "total" : 432,
+  "hostId" : "582de161-b2eb-4ea6-8f28-b2e4be5f5ca0"
+}, {
+  "id" : 169,
+  "startDate" : "2021-05-28",
+  "endDate" : "2021-05-29",
+  "guestId" : "667",
+  "total" : 240,
+  "hostId" : "582de161-b2eb-4ea6-8f28-b2e4be5f5ca0"
+}, {
+  "id" : 170,
+  "startDate" : "2021-08-03",
+  "endDate" : "2021-08-08",
+  "guestId" : "265",
+  "total" : 1056,
+  "hostId" : "582de161-b2eb-4ea6-8f28-b2e4be5f5ca0"
+}, {
+  "id" : 171,
+  "startDate" : "2021-10-28",
+  "endDate" : "2021-10-29",
+  "guestId" : "335",
+  "total" : 192,
+  "hostId" : "582de161-b2eb-4ea6-8f28-b2e4be5f5ca0"
+}, {
+  "id" : 172,
+  "startDate" : "2021-04-08",
+  "endDate" : "2021-04-14",
+  "guestId" : "626",
+  "total" : 1248,
+  "hostId" : "582de161-b2eb-4ea6-8f28-b2e4be5f5ca0"
+}, {
+  "id" : 173,
+  "startDate" : "2022-01-19",
+  "endDate" : "2022-01-25",
+  "guestId" : "29",
+  "total" : 1248,
+  "hostId" : "582de161-b2eb-4ea6-8f28-b2e4be5f5ca0"
+}, {
+  "id" : 174,
+  "startDate" : "2021-07-26",
+  "endDate" : "2021-07-29",
+  "guestId" : "565",
+  "total" : 303,
+  "hostId" : "45a0c5e8-6b73-46ca-8694-866b26bcafa5"
+}, {
+  "id" : 175,
+  "startDate" : "2021-05-11",
+  "endDate" : "2021-05-17",
+  "guestId" : "573",
+  "total" : 656.50,
+  "hostId" : "45a0c5e8-6b73-46ca-8694-866b26bcafa5"
+}, {
+  "id" : 176,
+  "startDate" : "2022-02-22",
+  "endDate" : "2022-02-27",
+  "guestId" : "929",
+  "total" : 555.50,
+  "hostId" : "45a0c5e8-6b73-46ca-8694-866b26bcafa5"
+}, {
+  "id" : 177,
+  "startDate" : "2021-12-30",
+  "endDate" : "2022-01-06",
+  "guestId" : "957",
+  "total" : 757.50,
+  "hostId" : "45a0c5e8-6b73-46ca-8694-866b26bcafa5"
+}, {
+  "id" : 178,
+  "startDate" : "2021-04-11",
+  "endDate" : "2021-04-16",
+  "guestId" : "144",
+  "total" : 505,
+  "hostId" : "45a0c5e8-6b73-46ca-8694-866b26bcafa5"
+}, {
+  "id" : 179,
+  "startDate" : "2021-06-25",
+  "endDate" : "2021-06-30",
+  "guestId" : "893",
+  "total" : 555.50,
+  "hostId" : "45a0c5e8-6b73-46ca-8694-866b26bcafa5"
+}, {
+  "id" : 180,
+  "startDate" : "2021-12-27",
+  "endDate" : "2021-12-28",
+  "guestId" : "711",
+  "total" : 101,
+  "hostId" : "45a0c5e8-6b73-46ca-8694-866b26bcafa5"
+}, {
+  "id" : 181,
+  "startDate" : "2021-10-11",
+  "endDate" : "2021-10-12",
+  "guestId" : "999",
+  "total" : 101,
+  "hostId" : "45a0c5e8-6b73-46ca-8694-866b26bcafa5"
+}, {
+  "id" : 182,
+  "startDate" : "2021-04-30",
+  "endDate" : "2021-05-03",
+  "guestId" : "390",
+  "total" : 353.50,
+  "hostId" : "45a0c5e8-6b73-46ca-8694-866b26bcafa5"
+}, {
+  "id" : 183,
+  "startDate" : "2021-06-05",
+  "endDate" : "2021-06-08",
+  "guestId" : "742",
+  "total" : 328.25,
+  "hostId" : "45a0c5e8-6b73-46ca-8694-866b26bcafa5"
+}, {
+  "id" : 184,
+  "startDate" : "2021-12-20",
+  "endDate" : "2021-12-25",
+  "guestId" : "173",
+  "total" : 530.25,
+  "hostId" : "45a0c5e8-6b73-46ca-8694-866b26bcafa5"
+}, {
+  "id" : 185,
+  "startDate" : "2021-12-23",
+  "endDate" : "2021-12-30",
+  "guestId" : "960",
+  "total" : 3592.50,
+  "hostId" : "9865a3b1-7bf9-4746-9426-3d4d8b3f574c"
+}, {
+  "id" : 186,
+  "startDate" : "2021-07-20",
+  "endDate" : "2021-07-22",
+  "guestId" : "229",
+  "total" : 958,
+  "hostId" : "9865a3b1-7bf9-4746-9426-3d4d8b3f574c"
+}, {
+  "id" : 187,
+  "startDate" : "2022-01-03",
+  "endDate" : "2022-01-09",
+  "guestId" : "119",
+  "total" : 3113.50,
+  "hostId" : "9865a3b1-7bf9-4746-9426-3d4d8b3f574c"
+}, {
+  "id" : 188,
+  "startDate" : "2021-12-13",
+  "endDate" : "2021-12-17",
+  "guestId" : "908",
+  "total" : 1916,
+  "hostId" : "9865a3b1-7bf9-4746-9426-3d4d8b3f574c"
+}, {
+  "id" : 189,
+  "startDate" : "2021-05-19",
+  "endDate" : "2021-05-25",
+  "guestId" : "223",
+  "total" : 3113.50,
+  "hostId" : "9865a3b1-7bf9-4746-9426-3d4d8b3f574c"
+}, {
+  "id" : 190,
+  "startDate" : "2021-09-14",
+  "endDate" : "2021-09-18",
+  "guestId" : "262",
+  "total" : 2035.75,
+  "hostId" : "9865a3b1-7bf9-4746-9426-3d4d8b3f574c"
+}, {
+  "id" : 191,
+  "startDate" : "2021-03-21",
+  "endDate" : "2021-03-25",
+  "guestId" : "535",
+  "total" : 1916,
+  "hostId" : "9865a3b1-7bf9-4746-9426-3d4d8b3f574c"
+}, {
+  "id" : 192,
+  "startDate" : "2021-07-24",
+  "endDate" : "2021-07-27",
+  "guestId" : "284",
+  "total" : 1556.75,
+  "hostId" : "9865a3b1-7bf9-4746-9426-3d4d8b3f574c"
+}, {
+  "id" : 193,
+  "startDate" : "2021-10-07",
+  "endDate" : "2021-10-13",
+  "guestId" : "200",
+  "total" : 3113.50,
+  "hostId" : "9865a3b1-7bf9-4746-9426-3d4d8b3f574c"
+}, {
+  "id" : 194,
+  "startDate" : "2021-09-03",
+  "endDate" : "2021-09-04",
+  "guestId" : "209",
+  "total" : 598.75,
+  "hostId" : "9865a3b1-7bf9-4746-9426-3d4d8b3f574c"
+}, {
+  "id" : 195,
+  "startDate" : "2021-03-26",
+  "endDate" : "2021-03-27",
+  "guestId" : "373",
+  "total" : 598.75,
+  "hostId" : "9865a3b1-7bf9-4746-9426-3d4d8b3f574c"
+}, {
+  "id" : 196,
+  "startDate" : "2021-04-12",
+  "endDate" : "2021-04-18",
+  "guestId" : "670",
+  "total" : 3113.50,
+  "hostId" : "9865a3b1-7bf9-4746-9426-3d4d8b3f574c"
+}, {
+  "id" : 197,
+  "startDate" : "2021-05-20",
+  "endDate" : "2021-05-23",
+  "guestId" : "928",
+  "total" : 462,
+  "hostId" : "cc136272-2816-416f-95b8-7122c4856b12"
+}, {
+  "id" : 198,
+  "startDate" : "2021-10-30",
+  "endDate" : "2021-11-02",
+  "guestId" : "330",
+  "total" : 429,
+  "hostId" : "cc136272-2816-416f-95b8-7122c4856b12"
+}, {
+  "id" : 199,
+  "startDate" : "2021-03-27",
+  "endDate" : "2021-04-03",
+  "guestId" : "460",
+  "total" : 990,
+  "hostId" : "cc136272-2816-416f-95b8-7122c4856b12"
+}, {
+  "id" : 200,
+  "startDate" : "2021-09-20",
+  "endDate" : "2021-09-21",
+  "guestId" : "663",
+  "total" : 132,
+  "hostId" : "cc136272-2816-416f-95b8-7122c4856b12"
+}, {
+  "id" : 201,
+  "startDate" : "2022-03-03",
+  "endDate" : "2022-03-07",
+  "guestId" : "414",
+  "total" : 594,
+  "hostId" : "cc136272-2816-416f-95b8-7122c4856b12"
+}, {
+  "id" : 202,
+  "startDate" : "2021-03-19",
+  "endDate" : "2021-03-26",
+  "guestId" : "257",
+  "total" : 990,
+  "hostId" : "cc136272-2816-416f-95b8-7122c4856b12"
+}, {
+  "id" : 203,
+  "startDate" : "2021-06-15",
+  "endDate" : "2021-06-17",
+  "guestId" : "483",
+  "total" : 264,
+  "hostId" : "cc136272-2816-416f-95b8-7122c4856b12"
+}, {
+  "id" : 204,
+  "startDate" : "2021-04-05",
+  "endDate" : "2021-04-12",
+  "guestId" : "567",
+  "total" : 990,
+  "hostId" : "cc136272-2816-416f-95b8-7122c4856b12"
+}, {
+  "id" : 205,
+  "startDate" : "2021-05-10",
+  "endDate" : "2021-05-16",
+  "guestId" : "269",
+  "total" : 858,
+  "hostId" : "cc136272-2816-416f-95b8-7122c4856b12"
+}, {
+  "id" : 206,
+  "startDate" : "2021-06-25",
+  "endDate" : "2021-07-01",
+  "guestId" : "366",
+  "total" : 858,
+  "hostId" : "cc136272-2816-416f-95b8-7122c4856b12"
+}, {
+  "id" : 207,
+  "startDate" : "2021-07-17",
+  "endDate" : "2021-07-22",
+  "guestId" : "980",
+  "total" : 693,
+  "hostId" : "cc136272-2816-416f-95b8-7122c4856b12"
+}, {
+  "id" : 208,
+  "startDate" : "2021-04-13",
+  "endDate" : "2021-04-16",
+  "guestId" : "946",
+  "total" : 234,
+  "hostId" : "86f374af-ce43-450a-8326-4b9423c9fad7"
+}, {
+  "id" : 209,
+  "startDate" : "2022-03-04",
+  "endDate" : "2022-03-06",
+  "guestId" : "292",
+  "total" : 195.0,
+  "hostId" : "86f374af-ce43-450a-8326-4b9423c9fad7"
+}, {
+  "id" : 210,
+  "startDate" : "2021-11-18",
+  "endDate" : "2021-11-24",
+  "guestId" : "44",
+  "total" : 507.0,
+  "hostId" : "86f374af-ce43-450a-8326-4b9423c9fad7"
+}, {
+  "id" : 211,
+  "startDate" : "2021-07-21",
+  "endDate" : "2021-07-25",
+  "guestId" : "777",
+  "total" : 351.0,
+  "hostId" : "86f374af-ce43-450a-8326-4b9423c9fad7"
+}, {
+  "id" : 212,
+  "startDate" : "2021-07-08",
+  "endDate" : "2021-07-09",
+  "guestId" : "250",
+  "total" : 78,
+  "hostId" : "86f374af-ce43-450a-8326-4b9423c9fad7"
+}, {
+  "id" : 213,
+  "startDate" : "2021-10-09",
+  "endDate" : "2021-10-13",
+  "guestId" : "273",
+  "total" : 331.5,
+  "hostId" : "86f374af-ce43-450a-8326-4b9423c9fad7"
+}, {
+  "id" : 214,
+  "startDate" : "2022-01-21",
+  "endDate" : "2022-01-25",
+  "guestId" : "73",
+  "total" : 351.0,
+  "hostId" : "86f374af-ce43-450a-8326-4b9423c9fad7"
+}, {
+  "id" : 215,
+  "startDate" : "2021-09-01",
+  "endDate" : "2021-09-05",
+  "guestId" : "880",
+  "total" : 351.0,
+  "hostId" : "86f374af-ce43-450a-8326-4b9423c9fad7"
+}, {
+  "id" : 216,
+  "startDate" : "2021-11-07",
+  "endDate" : "2021-11-14",
+  "guestId" : "165",
+  "total" : 585.0,
+  "hostId" : "86f374af-ce43-450a-8326-4b9423c9fad7"
+}, {
+  "id" : 217,
+  "startDate" : "2021-06-05",
+  "endDate" : "2021-06-10",
+  "guestId" : "724",
+  "total" : 409.5,
+  "hostId" : "86f374af-ce43-450a-8326-4b9423c9fad7"
+}, {
+  "id" : 218,
+  "startDate" : "2021-05-11",
+  "endDate" : "2021-05-14",
+  "guestId" : "267",
+  "total" : 234,
+  "hostId" : "86f374af-ce43-450a-8326-4b9423c9fad7"
+}, {
+  "id" : 219,
+  "startDate" : "2022-01-31",
+  "endDate" : "2022-02-01",
+  "guestId" : "527",
+  "total" : 78,
+  "hostId" : "86f374af-ce43-450a-8326-4b9423c9fad7"
+}, {
+  "id" : 220,
+  "startDate" : "2021-12-10",
+  "endDate" : "2021-12-11",
+  "guestId" : "360",
+  "total" : 97.5,
+  "hostId" : "86f374af-ce43-450a-8326-4b9423c9fad7"
+}, {
+  "id" : 221,
+  "startDate" : "2021-10-14",
+  "endDate" : "2021-10-20",
+  "guestId" : "26",
+  "total" : 507.0,
+  "hostId" : "86f374af-ce43-450a-8326-4b9423c9fad7"
+}, {
+  "id" : 222,
+  "startDate" : "2021-06-19",
+  "endDate" : "2021-06-24",
+  "guestId" : "430",
+  "total" : 409.5,
+  "hostId" : "86f374af-ce43-450a-8326-4b9423c9fad7"
+}, {
+  "id" : 223,
+  "startDate" : "2021-12-21",
+  "endDate" : "2021-12-26",
+  "guestId" : "774",
+  "total" : 429.0,
+  "hostId" : "86f374af-ce43-450a-8326-4b9423c9fad7"
+}, {
+  "id" : 224,
+  "startDate" : "2022-01-09",
+  "endDate" : "2022-01-11",
+  "guestId" : "18",
+  "total" : 156,
+  "hostId" : "86f374af-ce43-450a-8326-4b9423c9fad7"
+}, {
+  "id" : 225,
+  "startDate" : "2021-07-12",
+  "endDate" : "2021-07-18",
+  "guestId" : "513",
+  "total" : 507.0,
+  "hostId" : "86f374af-ce43-450a-8326-4b9423c9fad7"
+}, {
+  "id" : 226,
+  "startDate" : "2022-03-10",
+  "endDate" : "2022-03-14",
+  "guestId" : "934",
+  "total" : 1579.50,
+  "hostId" : "d451eb2a-5ac4-4c9f-8e02-efaca528985d"
+}, {
+  "id" : 227,
+  "startDate" : "2022-01-04",
+  "endDate" : "2022-01-10",
+  "guestId" : "20",
+  "total" : 2281.50,
+  "hostId" : "d451eb2a-5ac4-4c9f-8e02-efaca528985d"
+}, {
+  "id" : 228,
+  "startDate" : "2021-04-17",
+  "endDate" : "2021-04-22",
+  "guestId" : "243",
+  "total" : 1842.75,
+  "hostId" : "d451eb2a-5ac4-4c9f-8e02-efaca528985d"
+}, {
+  "id" : 229,
+  "startDate" : "2021-10-09",
+  "endDate" : "2021-10-12",
+  "guestId" : "800",
+  "total" : 1140.75,
+  "hostId" : "d451eb2a-5ac4-4c9f-8e02-efaca528985d"
+}, {
+  "id" : 230,
+  "startDate" : "2021-04-12",
+  "endDate" : "2021-04-15",
+  "guestId" : "863",
+  "total" : 1053,
+  "hostId" : "d451eb2a-5ac4-4c9f-8e02-efaca528985d"
+}, {
+  "id" : 231,
+  "startDate" : "2022-02-27",
+  "endDate" : "2022-02-28",
+  "guestId" : "125",
+  "total" : 351,
+  "hostId" : "d451eb2a-5ac4-4c9f-8e02-efaca528985d"
+}, {
+  "id" : 232,
+  "startDate" : "2021-09-11",
+  "endDate" : "2021-09-17",
+  "guestId" : "461",
+  "total" : 2193.75,
+  "hostId" : "d451eb2a-5ac4-4c9f-8e02-efaca528985d"
+}, {
+  "id" : 233,
+  "startDate" : "2021-12-16",
+  "endDate" : "2021-12-18",
+  "guestId" : "363",
+  "total" : 789.75,
+  "hostId" : "d451eb2a-5ac4-4c9f-8e02-efaca528985d"
+}, {
+  "id" : 234,
+  "startDate" : "2021-09-19",
+  "endDate" : "2021-09-26",
+  "guestId" : "955",
+  "total" : 2632.50,
+  "hostId" : "d451eb2a-5ac4-4c9f-8e02-efaca528985d"
+}, {
+  "id" : 235,
+  "startDate" : "2021-09-28",
+  "endDate" : "2021-10-01",
+  "guestId" : "301",
+  "total" : 1053,
+  "hostId" : "d451eb2a-5ac4-4c9f-8e02-efaca528985d"
+}, {
+  "id" : 236,
+  "startDate" : "2021-05-17",
+  "endDate" : "2021-05-20",
+  "guestId" : "520",
+  "total" : 1053,
+  "hostId" : "d451eb2a-5ac4-4c9f-8e02-efaca528985d"
+}, {
+  "id" : 237,
+  "startDate" : "2021-11-23",
+  "endDate" : "2021-11-27",
+  "guestId" : "141",
+  "total" : 1491.75,
+  "hostId" : "d451eb2a-5ac4-4c9f-8e02-efaca528985d"
+}, {
+  "id" : 238,
+  "startDate" : "2022-02-09",
+  "endDate" : "2022-02-15",
+  "guestId" : "321",
+  "total" : 2281.50,
+  "hostId" : "d451eb2a-5ac4-4c9f-8e02-efaca528985d"
+}, {
+  "id" : 239,
+  "startDate" : "2021-11-08",
+  "endDate" : "2021-11-12",
+  "guestId" : "704",
+  "total" : 1404,
+  "hostId" : "d451eb2a-5ac4-4c9f-8e02-efaca528985d"
+}, {
+  "id" : 240,
+  "startDate" : "2021-07-31",
+  "endDate" : "2021-08-03",
+  "guestId" : "508",
+  "total" : 1140.75,
+  "hostId" : "d451eb2a-5ac4-4c9f-8e02-efaca528985d"
+}, {
+  "id" : 241,
+  "startDate" : "2021-08-19",
+  "endDate" : "2021-08-22",
+  "guestId" : "833",
+  "total" : 1228.50,
+  "hostId" : "d451eb2a-5ac4-4c9f-8e02-efaca528985d"
+}, {
+  "id" : 242,
+  "startDate" : "2021-08-22",
+  "endDate" : "2021-08-28",
+  "guestId" : "34",
+  "total" : 2193.75,
+  "hostId" : "d451eb2a-5ac4-4c9f-8e02-efaca528985d"
+}, {
+  "id" : 243,
+  "startDate" : "2021-04-05",
+  "endDate" : "2021-04-06",
+  "guestId" : "659",
+  "total" : 388,
+  "hostId" : "b1d69bea-c9be-4217-aeba-bb04e414edc3"
+}, {
+  "id" : 244,
+  "startDate" : "2022-01-07",
+  "endDate" : "2022-01-08",
+  "guestId" : "909",
+  "total" : 485,
+  "hostId" : "b1d69bea-c9be-4217-aeba-bb04e414edc3"
+}, {
+  "id" : 245,
+  "startDate" : "2022-02-13",
+  "endDate" : "2022-02-20",
+  "guestId" : "705",
+  "total" : 2910,
+  "hostId" : "b1d69bea-c9be-4217-aeba-bb04e414edc3"
+}, {
+  "id" : 246,
+  "startDate" : "2021-12-03",
+  "endDate" : "2021-12-09",
+  "guestId" : "947",
+  "total" : 2522,
+  "hostId" : "b1d69bea-c9be-4217-aeba-bb04e414edc3"
+}, {
+  "id" : 247,
+  "startDate" : "2021-06-12",
+  "endDate" : "2021-06-16",
+  "guestId" : "252",
+  "total" : 1649,
+  "hostId" : "b1d69bea-c9be-4217-aeba-bb04e414edc3"
+}, {
+  "id" : 248,
+  "startDate" : "2021-08-06",
+  "endDate" : "2021-08-07",
+  "guestId" : "977",
+  "total" : 485,
+  "hostId" : "b1d69bea-c9be-4217-aeba-bb04e414edc3"
+}, {
+  "id" : 249,
+  "startDate" : "2022-02-03",
+  "endDate" : "2022-02-08",
+  "guestId" : "837",
+  "total" : 2134,
+  "hostId" : "b1d69bea-c9be-4217-aeba-bb04e414edc3"
+}, {
+  "id" : 250,
+  "startDate" : "2022-01-21",
+  "endDate" : "2022-01-23",
+  "guestId" : "131",
+  "total" : 970,
+  "hostId" : "b1d69bea-c9be-4217-aeba-bb04e414edc3"
+}, {
+  "id" : 251,
+  "startDate" : "2021-09-25",
+  "endDate" : "2021-10-01",
+  "guestId" : "63",
+  "total" : 2425,
+  "hostId" : "b1d69bea-c9be-4217-aeba-bb04e414edc3"
+}, {
+  "id" : 252,
+  "startDate" : "2021-04-12",
+  "endDate" : "2021-04-15",
+  "guestId" : "807",
+  "total" : 1164,
+  "hostId" : "b1d69bea-c9be-4217-aeba-bb04e414edc3"
+}, {
+  "id" : 253,
+  "startDate" : "2021-10-25",
+  "endDate" : "2021-10-31",
+  "guestId" : "569",
+  "total" : 2522,
+  "hostId" : "b1d69bea-c9be-4217-aeba-bb04e414edc3"
+}, {
+  "id" : 254,
+  "startDate" : "2021-11-13",
+  "endDate" : "2021-11-20",
+  "guestId" : "245",
+  "total" : 1170,
+  "hostId" : "596a1721-ce62-464b-a051-b4dfcc303cab"
+}, {
+  "id" : 255,
+  "startDate" : "2021-04-19",
+  "endDate" : "2021-04-21",
+  "guestId" : "858",
+  "total" : 312,
+  "hostId" : "596a1721-ce62-464b-a051-b4dfcc303cab"
+}, {
+  "id" : 256,
+  "startDate" : "2021-10-23",
+  "endDate" : "2021-10-29",
+  "guestId" : "61",
+  "total" : 975,
+  "hostId" : "596a1721-ce62-464b-a051-b4dfcc303cab"
+}, {
+  "id" : 257,
+  "startDate" : "2022-01-02",
+  "endDate" : "2022-01-09",
+  "guestId" : "366",
+  "total" : 1170,
+  "hostId" : "596a1721-ce62-464b-a051-b4dfcc303cab"
+}, {
+  "id" : 258,
+  "startDate" : "2021-09-01",
+  "endDate" : "2021-09-08",
+  "guestId" : "785",
+  "total" : 1170,
+  "hostId" : "596a1721-ce62-464b-a051-b4dfcc303cab"
+}, {
+  "id" : 259,
+  "startDate" : "2021-07-20",
+  "endDate" : "2021-07-24",
+  "guestId" : "858",
+  "total" : 663,
+  "hostId" : "596a1721-ce62-464b-a051-b4dfcc303cab"
+}, {
+  "id" : 260,
+  "startDate" : "2021-05-19",
+  "endDate" : "2021-05-25",
+  "guestId" : "182",
+  "total" : 1014,
+  "hostId" : "596a1721-ce62-464b-a051-b4dfcc303cab"
+}, {
+  "id" : 261,
+  "startDate" : "2021-06-17",
+  "endDate" : "2021-06-20",
+  "guestId" : "899",
+  "total" : 546,
+  "hostId" : "596a1721-ce62-464b-a051-b4dfcc303cab"
+}, {
+  "id" : 262,
+  "startDate" : "2021-08-02",
+  "endDate" : "2021-08-05",
+  "guestId" : "291",
+  "total" : 468,
+  "hostId" : "596a1721-ce62-464b-a051-b4dfcc303cab"
+}, {
+  "id" : 263,
+  "startDate" : "2022-03-09",
+  "endDate" : "2022-03-16",
+  "guestId" : "804",
+  "total" : 1170,
+  "hostId" : "596a1721-ce62-464b-a051-b4dfcc303cab"
+}, {
+  "id" : 264,
+  "startDate" : "2022-02-11",
+  "endDate" : "2022-02-15",
+  "guestId" : "744",
+  "total" : 702,
+  "hostId" : "596a1721-ce62-464b-a051-b4dfcc303cab"
+}, {
+  "id" : 265,
+  "startDate" : "2022-03-18",
+  "endDate" : "2022-03-19",
+  "guestId" : "914",
+  "total" : 195,
+  "hostId" : "596a1721-ce62-464b-a051-b4dfcc303cab"
+}, {
+  "id" : 266,
+  "startDate" : "2022-01-26",
+  "endDate" : "2022-01-27",
+  "guestId" : "251",
+  "total" : 156,
+  "hostId" : "596a1721-ce62-464b-a051-b4dfcc303cab"
+}, {
+  "id" : 267,
+  "startDate" : "2021-11-22",
+  "endDate" : "2021-11-29",
+  "guestId" : "325",
+  "total" : 1170,
+  "hostId" : "596a1721-ce62-464b-a051-b4dfcc303cab"
+}, {
+  "id" : 268,
+  "startDate" : "2022-02-13",
+  "endDate" : "2022-02-15",
+  "guestId" : "194",
+  "total" : 510,
+  "hostId" : "5bf404f0-0e79-4610-96dd-613fb2664b69"
+}, {
+  "id" : 269,
+  "startDate" : "2021-12-04",
+  "endDate" : "2021-12-05",
+  "guestId" : "412",
+  "total" : 318.75,
+  "hostId" : "5bf404f0-0e79-4610-96dd-613fb2664b69"
+}, {
+  "id" : 270,
+  "startDate" : "2021-12-07",
+  "endDate" : "2021-12-13",
+  "guestId" : "451",
+  "total" : 1657.50,
+  "hostId" : "5bf404f0-0e79-4610-96dd-613fb2664b69"
+}, {
+  "id" : 271,
+  "startDate" : "2021-12-15",
+  "endDate" : "2021-12-17",
+  "guestId" : "251",
+  "total" : 510,
+  "hostId" : "5bf404f0-0e79-4610-96dd-613fb2664b69"
+}, {
+  "id" : 272,
+  "startDate" : "2021-10-12",
+  "endDate" : "2021-10-15",
+  "guestId" : "80",
+  "total" : 765,
+  "hostId" : "5bf404f0-0e79-4610-96dd-613fb2664b69"
+}, {
+  "id" : 273,
+  "startDate" : "2021-04-18",
+  "endDate" : "2021-04-22",
+  "guestId" : "808",
+  "total" : 1020,
+  "hostId" : "5bf404f0-0e79-4610-96dd-613fb2664b69"
+}, {
+  "id" : 274,
+  "startDate" : "2021-08-25",
+  "endDate" : "2021-08-30",
+  "guestId" : "534",
+  "total" : 1402.50,
+  "hostId" : "5bf404f0-0e79-4610-96dd-613fb2664b69"
+}, {
+  "id" : 275,
+  "startDate" : "2021-04-08",
+  "endDate" : "2021-04-09",
+  "guestId" : "524",
+  "total" : 255,
+  "hostId" : "5bf404f0-0e79-4610-96dd-613fb2664b69"
+}, {
+  "id" : 276,
+  "startDate" : "2022-02-26",
+  "endDate" : "2022-02-27",
+  "guestId" : "663",
+  "total" : 318.75,
+  "hostId" : "5bf404f0-0e79-4610-96dd-613fb2664b69"
+}, {
+  "id" : 277,
+  "startDate" : "2021-11-06",
+  "endDate" : "2021-11-09",
+  "guestId" : "488",
+  "total" : 828.75,
+  "hostId" : "5bf404f0-0e79-4610-96dd-613fb2664b69"
+}, {
+  "id" : 278,
+  "startDate" : "2021-09-02",
+  "endDate" : "2021-09-09",
+  "guestId" : "636",
+  "total" : 1912.50,
+  "hostId" : "5bf404f0-0e79-4610-96dd-613fb2664b69"
+}, {
+  "id" : 279,
+  "startDate" : "2021-05-20",
+  "endDate" : "2021-05-23",
+  "guestId" : "34",
+  "total" : 892.50,
+  "hostId" : "5bf404f0-0e79-4610-96dd-613fb2664b69"
+}, {
+  "id" : 280,
+  "startDate" : "2021-07-12",
+  "endDate" : "2021-07-18",
+  "guestId" : "74",
+  "total" : 1657.50,
+  "hostId" : "5bf404f0-0e79-4610-96dd-613fb2664b69"
+}, {
+  "id" : 281,
+  "startDate" : "2021-09-11",
+  "endDate" : "2021-09-12",
+  "guestId" : "404",
+  "total" : 318.75,
+  "hostId" : "5bf404f0-0e79-4610-96dd-613fb2664b69"
+}, {
+  "id" : 282,
+  "startDate" : "2021-10-30",
+  "endDate" : "2021-11-04",
+  "guestId" : "557",
+  "total" : 1338.75,
+  "hostId" : "5bf404f0-0e79-4610-96dd-613fb2664b69"
+}, {
+  "id" : 283,
+  "startDate" : "2021-08-17",
+  "endDate" : "2021-08-19",
+  "guestId" : "39",
+  "total" : 510,
+  "hostId" : "5bf404f0-0e79-4610-96dd-613fb2664b69"
+}, {
+  "id" : 284,
+  "startDate" : "2021-10-12",
+  "endDate" : "2021-10-14",
+  "guestId" : "663",
+  "total" : 400,
+  "hostId" : "2e72f86c-b8fe-4265-b4f1-304dea8762db"
+}, {
+  "id" : 285,
+  "startDate" : "2021-09-10",
+  "endDate" : "2021-09-16",
+  "guestId" : "136",
+  "total" : 1300,
+  "hostId" : "2e72f86c-b8fe-4265-b4f1-304dea8762db"
+}, {
+  "id" : 286,
+  "startDate" : "2021-10-02",
+  "endDate" : "2021-10-04",
+  "guestId" : "738",
+  "total" : 450,
+  "hostId" : "2e72f86c-b8fe-4265-b4f1-304dea8762db"
+}, {
+  "id" : 287,
+  "startDate" : "2022-01-13",
+  "endDate" : "2022-01-19",
+  "guestId" : "42",
+  "total" : 1300,
+  "hostId" : "2e72f86c-b8fe-4265-b4f1-304dea8762db"
+}, {
+  "id" : 288,
+  "startDate" : "2021-07-31",
+  "endDate" : "2021-08-02",
+  "guestId" : "799",
+  "total" : 450,
+  "hostId" : "2e72f86c-b8fe-4265-b4f1-304dea8762db"
+}, {
+  "id" : 289,
+  "startDate" : "2022-03-04",
+  "endDate" : "2022-03-11",
+  "guestId" : "151",
+  "total" : 1500,
+  "hostId" : "2e72f86c-b8fe-4265-b4f1-304dea8762db"
+}, {
+  "id" : 290,
+  "startDate" : "2021-04-05",
+  "endDate" : "2021-04-08",
+  "guestId" : "850",
+  "total" : 600,
+  "hostId" : "2e72f86c-b8fe-4265-b4f1-304dea8762db"
+}, {
+  "id" : 291,
+  "startDate" : "2021-08-18",
+  "endDate" : "2021-08-24",
+  "guestId" : "814",
+  "total" : 1300,
+  "hostId" : "2e72f86c-b8fe-4265-b4f1-304dea8762db"
+}, {
+  "id" : 292,
+  "startDate" : "2021-05-04",
+  "endDate" : "2021-05-11",
+  "guestId" : "829",
+  "total" : 1500,
+  "hostId" : "2e72f86c-b8fe-4265-b4f1-304dea8762db"
+}, {
+  "id" : 293,
+  "startDate" : "2022-02-09",
+  "endDate" : "2022-02-10",
+  "guestId" : "697",
+  "total" : 200,
+  "hostId" : "2e72f86c-b8fe-4265-b4f1-304dea8762db"
+}, {
+  "id" : 294,
+  "startDate" : "2021-06-28",
+  "endDate" : "2021-06-29",
+  "guestId" : "460",
+  "total" : 200,
+  "hostId" : "2e72f86c-b8fe-4265-b4f1-304dea8762db"
+}, {
+  "id" : 295,
+  "startDate" : "2022-01-05",
+  "endDate" : "2022-01-10",
+  "guestId" : "735",
+  "total" : 1100,
+  "hostId" : "2e72f86c-b8fe-4265-b4f1-304dea8762db"
+}, {
+  "id" : 296,
+  "startDate" : "2022-01-21",
+  "endDate" : "2022-01-27",
+  "guestId" : "582",
+  "total" : 2847.0,
+  "hostId" : "8863340f-7c70-4aaa-8a20-eec04aeef9f4"
+}, {
+  "id" : 297,
+  "startDate" : "2021-12-26",
+  "endDate" : "2021-12-30",
+  "guestId" : "334",
+  "total" : 1752,
+  "hostId" : "8863340f-7c70-4aaa-8a20-eec04aeef9f4"
+}, {
+  "id" : 298,
+  "startDate" : "2022-03-11",
+  "endDate" : "2022-03-14",
+  "guestId" : "534",
+  "total" : 1533.0,
+  "hostId" : "8863340f-7c70-4aaa-8a20-eec04aeef9f4"
+}, {
+  "id" : 299,
+  "startDate" : "2021-07-22",
+  "endDate" : "2021-07-25",
+  "guestId" : "775",
+  "total" : 1533.0,
+  "hostId" : "8863340f-7c70-4aaa-8a20-eec04aeef9f4"
+}, {
+  "id" : 300,
+  "startDate" : "2021-07-26",
+  "endDate" : "2021-07-29",
+  "guestId" : "734",
+  "total" : 1314,
+  "hostId" : "8863340f-7c70-4aaa-8a20-eec04aeef9f4"
+}, {
+  "id" : 301,
+  "startDate" : "2021-11-01",
+  "endDate" : "2021-11-04",
+  "guestId" : "68",
+  "total" : 1314,
+  "hostId" : "8863340f-7c70-4aaa-8a20-eec04aeef9f4"
+}, {
+  "id" : 302,
+  "startDate" : "2021-09-08",
+  "endDate" : "2021-09-15",
+  "guestId" : "250",
+  "total" : 3285.0,
+  "hostId" : "8863340f-7c70-4aaa-8a20-eec04aeef9f4"
+}, {
+  "id" : 303,
+  "startDate" : "2021-08-16",
+  "endDate" : "2021-08-20",
+  "guestId" : "881",
+  "total" : 1752,
+  "hostId" : "8863340f-7c70-4aaa-8a20-eec04aeef9f4"
+}, {
+  "id" : 304,
+  "startDate" : "2022-03-05",
+  "endDate" : "2022-03-11",
+  "guestId" : "281",
+  "total" : 2737.5,
+  "hostId" : "8863340f-7c70-4aaa-8a20-eec04aeef9f4"
+}, {
+  "id" : 305,
+  "startDate" : "2021-08-30",
+  "endDate" : "2021-09-06",
+  "guestId" : "20",
+  "total" : 3285.0,
+  "hostId" : "8863340f-7c70-4aaa-8a20-eec04aeef9f4"
+}, {
+  "id" : 306,
+  "startDate" : "2021-05-26",
+  "endDate" : "2021-05-30",
+  "guestId" : "46",
+  "total" : 1971.0,
+  "hostId" : "8863340f-7c70-4aaa-8a20-eec04aeef9f4"
+}, {
+  "id" : 307,
+  "startDate" : "2021-12-24",
+  "endDate" : "2021-12-25",
+  "guestId" : "882",
+  "total" : 547.5,
+  "hostId" : "8863340f-7c70-4aaa-8a20-eec04aeef9f4"
+}, {
+  "id" : 308,
+  "startDate" : "2021-06-13",
+  "endDate" : "2021-06-18",
+  "guestId" : "526",
+  "total" : 2190,
+  "hostId" : "8863340f-7c70-4aaa-8a20-eec04aeef9f4"
+}, {
+  "id" : 309,
+  "startDate" : "2021-09-28",
+  "endDate" : "2021-09-30",
+  "guestId" : "564",
+  "total" : 876,
+  "hostId" : "8863340f-7c70-4aaa-8a20-eec04aeef9f4"
+}, {
+  "id" : 310,
+  "startDate" : "2022-02-10",
+  "endDate" : "2022-02-13",
+  "guestId" : "795",
+  "total" : 1533.0,
+  "hostId" : "8863340f-7c70-4aaa-8a20-eec04aeef9f4"
+}, {
+  "id" : 311,
+  "startDate" : "2022-01-21",
+  "endDate" : "2022-01-22",
+  "guestId" : "968",
+  "total" : 278.75,
+  "hostId" : "c74eb1a7-1be8-422a-9f36-8de5a8b4659b"
+}, {
+  "id" : 312,
+  "startDate" : "2021-12-09",
+  "endDate" : "2021-12-14",
+  "guestId" : "181",
+  "total" : 1226.50,
+  "hostId" : "c74eb1a7-1be8-422a-9f36-8de5a8b4659b"
+}, {
+  "id" : 313,
+  "startDate" : "2022-01-27",
+  "endDate" : "2022-02-03",
+  "guestId" : "781",
+  "total" : 1672.50,
+  "hostId" : "c74eb1a7-1be8-422a-9f36-8de5a8b4659b"
+}, {
+  "id" : 314,
+  "startDate" : "2021-05-19",
+  "endDate" : "2021-05-26",
+  "guestId" : "131",
+  "total" : 1672.50,
+  "hostId" : "c74eb1a7-1be8-422a-9f36-8de5a8b4659b"
+}, {
+  "id" : 315,
+  "startDate" : "2021-11-21",
+  "endDate" : "2021-11-22",
+  "guestId" : "146",
+  "total" : 223,
+  "hostId" : "c74eb1a7-1be8-422a-9f36-8de5a8b4659b"
+}, {
+  "id" : 316,
+  "startDate" : "2021-04-09",
+  "endDate" : "2021-04-11",
+  "guestId" : "79",
+  "total" : 557.50,
+  "hostId" : "c74eb1a7-1be8-422a-9f36-8de5a8b4659b"
+}, {
+  "id" : 317,
+  "startDate" : "2021-03-21",
+  "endDate" : "2021-03-27",
+  "guestId" : "969",
+  "total" : 1393.75,
+  "hostId" : "c74eb1a7-1be8-422a-9f36-8de5a8b4659b"
+}, {
+  "id" : 318,
+  "startDate" : "2021-04-23",
+  "endDate" : "2021-04-27",
+  "guestId" : "353",
+  "total" : 1003.50,
+  "hostId" : "c74eb1a7-1be8-422a-9f36-8de5a8b4659b"
+}, {
+  "id" : 319,
+  "startDate" : "2021-09-27",
+  "endDate" : "2021-10-02",
+  "guestId" : "974",
+  "total" : 1170.75,
+  "hostId" : "c74eb1a7-1be8-422a-9f36-8de5a8b4659b"
+}, {
+  "id" : 320,
+  "startDate" : "2021-05-05",
+  "endDate" : "2021-05-10",
+  "guestId" : "289",
+  "total" : 1226.50,
+  "hostId" : "c74eb1a7-1be8-422a-9f36-8de5a8b4659b"
+}, {
+  "id" : 321,
+  "startDate" : "2021-08-04",
+  "endDate" : "2021-08-10",
+  "guestId" : "336",
+  "total" : 1449.50,
+  "hostId" : "c74eb1a7-1be8-422a-9f36-8de5a8b4659b"
+}, {
+  "id" : 322,
+  "startDate" : "2021-07-04",
+  "endDate" : "2021-07-05",
+  "guestId" : "634",
+  "total" : 223,
+  "hostId" : "c74eb1a7-1be8-422a-9f36-8de5a8b4659b"
+}, {
+  "id" : 323,
+  "startDate" : "2021-06-21",
+  "endDate" : "2021-06-22",
+  "guestId" : "350",
+  "total" : 227,
+  "hostId" : "7f500db7-e687-4430-bef0-b8c74f63e616"
+}, {
+  "id" : 324,
+  "startDate" : "2022-01-07",
+  "endDate" : "2022-01-11",
+  "guestId" : "272",
+  "total" : 1021.50,
+  "hostId" : "7f500db7-e687-4430-bef0-b8c74f63e616"
+}, {
+  "id" : 325,
+  "startDate" : "2021-03-29",
+  "endDate" : "2021-04-02",
+  "guestId" : "528",
+  "total" : 908,
+  "hostId" : "7f500db7-e687-4430-bef0-b8c74f63e616"
+}, {
+  "id" : 326,
+  "startDate" : "2021-12-24",
+  "endDate" : "2021-12-27",
+  "guestId" : "436",
+  "total" : 794.50,
+  "hostId" : "7f500db7-e687-4430-bef0-b8c74f63e616"
+}, {
+  "id" : 327,
+  "startDate" : "2021-04-04",
+  "endDate" : "2021-04-10",
+  "guestId" : "233",
+  "total" : 1418.75,
+  "hostId" : "7f500db7-e687-4430-bef0-b8c74f63e616"
+}, {
+  "id" : 328,
+  "startDate" : "2021-10-11",
+  "endDate" : "2021-10-18",
+  "guestId" : "467",
+  "total" : 1702.50,
+  "hostId" : "7f500db7-e687-4430-bef0-b8c74f63e616"
+}, {
+  "id" : 329,
+  "startDate" : "2021-11-23",
+  "endDate" : "2021-11-27",
+  "guestId" : "453",
+  "total" : 964.75,
+  "hostId" : "7f500db7-e687-4430-bef0-b8c74f63e616"
+}, {
+  "id" : 330,
+  "startDate" : "2022-02-24",
+  "endDate" : "2022-03-03",
+  "guestId" : "375",
+  "total" : 1702.50,
+  "hostId" : "7f500db7-e687-4430-bef0-b8c74f63e616"
+}, {
+  "id" : 331,
+  "startDate" : "2021-10-25",
+  "endDate" : "2021-11-01",
+  "guestId" : "524",
+  "total" : 1702.50,
+  "hostId" : "7f500db7-e687-4430-bef0-b8c74f63e616"
+}, {
+  "id" : 332,
+  "startDate" : "2021-05-06",
+  "endDate" : "2021-05-09",
+  "guestId" : "873",
+  "total" : 794.50,
+  "hostId" : "7f500db7-e687-4430-bef0-b8c74f63e616"
+}, {
+  "id" : 333,
+  "startDate" : "2021-07-21",
+  "endDate" : "2021-07-22",
+  "guestId" : "991",
+  "total" : 227,
+  "hostId" : "7f500db7-e687-4430-bef0-b8c74f63e616"
+}, {
+  "id" : 334,
+  "startDate" : "2021-06-05",
+  "endDate" : "2021-06-07",
+  "guestId" : "183",
+  "total" : 510.75,
+  "hostId" : "7f500db7-e687-4430-bef0-b8c74f63e616"
+}, {
+  "id" : 335,
+  "startDate" : "2021-09-28",
+  "endDate" : "2021-10-03",
+  "guestId" : "541",
+  "total" : 1248.50,
+  "hostId" : "7f500db7-e687-4430-bef0-b8c74f63e616"
+} ]
