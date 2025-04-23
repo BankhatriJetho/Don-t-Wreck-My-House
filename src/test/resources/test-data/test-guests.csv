@@ -1,0 +1,3 @@
+guest_id,first_name,last_name,email,phone,state
+1,Testy,Tester,test@example.com,1234567890,NY
+2,Fakey,Fakerson,fake@example.com,0987654321,CA

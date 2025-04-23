@@ -1,0 +1,4 @@
+id,start_date,end_date,guest_id,total
+1,2025-04-20,2025-04-23,guest-1,450.00
+2,invalid,data,line,here
+3,2025-04-25,2025-04-28,guest-2,500.00
